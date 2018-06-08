@@ -21,6 +21,9 @@
             window.scrollTo(0, 1);
             }
         </script>
+        <script src="public/js/jquery-3.2.1.min.js"></script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
         <link href="public/css/bootstrap.css" rel='stylesheet' type='text/css' />
         <link rel="stylesheet" href="public/css/flexslider.css" type="text/css" media="screen" property="" />
         <link href="public/css/style.css" rel='stylesheet' type='text/css' />
@@ -28,6 +31,8 @@
         <link href="public/css/fontawesome-all.css" rel="stylesheet">
         <link href="public/css/contact.css" rel='stylesheet' type='text/css' />
         <link href="public/css/team.css" rel='stylesheet' type='text/css' />
+       
+        
         <link href="//fonts.googleapis.com/css?family=Poppins:100i,200,200i,300,400,400i,500,500i,600,600i,700,700i,800" rel="stylesheet">
     </head>
 

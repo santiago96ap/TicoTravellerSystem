@@ -75,8 +75,8 @@ include_once 'public/header.php';
 
         <div class="form-group">
             <label for="sel1">De las ilustraciones anteriores. ¿Cúal prefiere?</label>
-            <select class="form-control" id="sel1">
-                <option>Rural</option>
+            <select class="form-control" id="p1">
+                <option selected="selected">Rural</option>
                 <option>Urbano</option>
             </select>
         </div>
@@ -114,8 +114,8 @@ include_once 'public/header.php';
 
         <div class="form-group">
             <label for="sel1">¿Cúal el tipo de destino que  prefiere?</label>
-            <select class="form-control" id="sel1">
-                <option>Económico</option>
+            <select class="form-control" id="p2">
+                <option selected="selected">Económico</option>
                 <option>Intermedio</option>                
                 <option>Costoso</option>
 
@@ -175,8 +175,8 @@ include_once 'public/header.php';
 
         <div class="form-group">
             <label for="sel1">¿Cúal el tipo de destino que  prefiere?</label>
-            <select class="form-control" id="sel1">
-                <option>Playa</option>
+            <select class="form-control" id="p3">
+                <option selected="selected">Playa</option>
                 <option>Montaña</option>                
                 <option>Centro turístico</option>
 
@@ -214,8 +214,8 @@ include_once 'public/header.php';
 
         <div class="form-group">
             <label for="sel1">¿Cuánto tiempor tiene pensado durar en el viaje?</label>
-            <select class="form-control" id="sel1">
-                <option>Menos de una hora</option>
+            <select class="form-control" id="p4">
+                <option selected="selected">Menos de una hora</option>
                 <option>1-2 horas</option>                
                 <option>3-más horas</option>
 
@@ -264,8 +264,8 @@ include_once 'public/header.php';
 
         <div class="form-group">
             <label for="sel1">De las ilustraciones anteriores. ¿Cúal prefiere?</label>
-            <select class="form-control" id="sel1">
-                <option>Asfalto</option>
+            <select class="form-control" id="p5">
+                <option selected="selected">Asfalto</option>
                 <option>Lastre</option>
             </select>
         </div>
@@ -331,12 +331,49 @@ include_once 'public/footer.php';
                 $('#p1').hide(); //oculto mediante id
                 break;
             case "6":
-                window.location.replace("?controlador=Default&accion=resultadoRecomendacion");
+                window.location.replace("?Controller=Index&action=resultadoRecomendacion");
                 break;
             default:
                 break;
         }//switch
     }//cambiarOpcion
+
+
+    function enviarDatosRecomendacion(){
+
+        var parametros = {
+            "p1" : $("#p1").val(),
+            "p2" : $("#p2").val(),
+            "p3" : $("#p3").val(),
+            "p4":  $("#p4").val(),
+            "p5":  $("#p5").val()
+        };
+        $("#resultado").empty();
+        $.ajax({
+                data:  parametros,
+                url:   '?Controller=Site&action=getSimilarity"',
+                type:  'post',
+                beforeSend: function () {
+
+                    var progreso = 0;
+                    var idIterval = setInterval(function(){
+                      progreso +=20;
+                      $('#bar').css('width', progreso + '%');
+                      if(progreso == 100){
+                        clearInterval(idIterval);
+                      }
+                    },100);
+
+                },
+                success:  function (response) {
+                    $("#resultado").append("Usted es de Red clase: "+response);
+                }
+        });
+
+
+
+
+    }//enviarDatosRecomendacion
 
 </script>
 

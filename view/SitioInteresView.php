@@ -1,6 +1,8 @@
 <?php
 include_once 'public/header.php';
 ?>
+
+
 <div class="banner-inner">
 </div>
 <ol class="breadcrumb">
@@ -39,10 +41,10 @@ include_once 'public/header.php';
             <h6>Busca sitios que te interese...</h6>
             <form action="#" method="post">
                 <div class="contact_left_grid">
-                    <input type="text" placeholder="buscar..." onfocus="this.value = '';" onblur="if (this.value == '') {
-                        this.value = 'buscar...';
-                    }" required=""><br><br>
-                    
+                    <select id="sito" class=".js-example-basic-single" name="states"">
+                        <option value="AL">Alabama</option>
+                        <option value="WY">Wyoming</option>
+                    </select>
                     <input type="submit" value="Buscar" onclick="buscar('1');">
                     <input type="reset" value="Limpiar" onclick="buscar('2');">
                     <div class="clearfix"> </div>
@@ -72,7 +74,10 @@ include_once 'public/footer.php';
 ?>
 
 <script>
-
+    $(document).ready(function() {
+        $('.js-example-basic-single').select2();
+    });
+    
     function buscar(opcion){
         if(opcion == '1'){
             $("#resultado").show();
@@ -82,3 +87,4 @@ include_once 'public/footer.php';
         
     }
 </script>
+
