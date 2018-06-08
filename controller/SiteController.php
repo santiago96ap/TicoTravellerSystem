@@ -12,6 +12,8 @@ class SiteController {
         $this->view->show("indexView.php");
     }
 
+    /*****************************************APLICACIÓN ANDROID********************************************/
+
     /*
      * El metodo se encarga de obtener los nombres de todos los sitios turisticos de la base de datos
      */
@@ -132,5 +134,16 @@ class SiteController {
             return strnatcmp($a[$clave], $b[$clave]);
         };
     }//build_sorter
-}
+
+
+    /*****************************APLICACIÓN WEB***************************/
+
+    
+
+
+
+
+    
+
+}//class
 
