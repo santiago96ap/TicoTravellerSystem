@@ -5,7 +5,7 @@ include_once 'public/header.php';
 </div>
 <ol class="breadcrumb">
     <li class="breadcrumb-item">
-        <a href="?Controller=Index&action=indexADM">Inicio</a>
+        <a href="?controller=Index&action=indexADM">Inicio</a>
     </li>
     <li class="breadcrumb-item active">Registar Sitio</li>
 </ol>
@@ -75,18 +75,18 @@ include_once 'public/header.php';
                     <select class="form-control" id="categoria">
                         <option value="natural" data-tokens="">Natural</option>
                         <option value="hotel" data-tokens="">Hotel</option>
-                        <option value="" data-tokens="">Paradero</option>
-                        <option value="" data-tokens="">Restaurante</option>
+                        <option value="paradero" data-tokens="">Paradero</option>
+                        <option value="restaurante" data-tokens="">Restaurante</option>
                     </select>
                 </div>
 
                 <div class="input-group">
                     <div class="custom-file">
-<!--                          <input type="file" class="custom-file-input" id="myfile" name="myfile" size="30">
-                        <label class="custom-file-label" for="inputGroupFile04">Elegir una im&aacute;gen</label> -->
+                         <input type="file" class="custom-file-input" id="myfile" name="myfile" size="30">
+                        <label class="custom-file-label" for="inputGroupFile04">Elegir una im&aacute;gen</label> 
                     </div>
                 </div>
-                <input type="submit" id="send-info" value="Ingresar"/>
+                <input type="button" class="btn btn-primary" id="send-info" value="Ingresar"/>
             </form>
         </div>
     </div>

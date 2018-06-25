@@ -42,8 +42,7 @@ include_once 'public/header.php';
                 <div class="contact_left_grid">
                     <input type="email" name="userName" id="userName" placeholder="Correo electrónico" required="">
                     <input type="text" name="pass" id="pass" placeholder="contraseña" required=""><br><br>
-                    <input type="submit" id="send-info" value="Ingresar"/>
-                    <input type="reset" value="Limpiar">
+                    <input type="button" class="btn btn-primary" id="send-info" value="Ingresar"/>
                     <div class="clearfix"> </div>
                 </div>
             </form>

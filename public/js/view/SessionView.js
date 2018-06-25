@@ -10,7 +10,7 @@ $("#send-info").click(function () {
         if (data.result==="1") {
            setTimeout("location.href = '?controller=index&action=indexADM';", 100);
         }else{
-            alert("OOOPS ALGO FALLÓ XD");
+            alert("Solicitud ejecutada incorrectamente");
         }
     }, "json");
 });

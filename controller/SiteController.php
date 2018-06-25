@@ -16,13 +16,13 @@ class SiteController {
         require 'model/SiteModel.php';
         $model = new SiteModel();
 
-/*        $file = $_FILES['file'];
+        $file = $_FILES['file'];
         $type = $file["type"];
         $UrlTemp = $file["tmp_name"];
-        $folder = "public/img/";*/
+        $folder = "public/img/";
         $path="";
         
-/*        if ($type != 'image/jpg' && $type != 'image/jpeg' && $type != 'image/png' && $type != 'image/gif') {
+        if ($type != 'image/jpg' && $type != 'image/jpeg' && $type != 'image/png' && $type != 'image/gif') {
             throw new Exception('');
         }else {
             $totalFiles = count(glob($folder . '{*.jpg,*.gif,*.png,*.jpeg}', GLOB_BRACE));
@@ -30,7 +30,7 @@ class SiteController {
             $src = $folder.$totalFiles.'.'.$typeTemp[1];
             $path=$totalFiles.'.'.$typeTemp[1];
             move_uploaded_file($UrlTemp, $src);
-        }*/
+        }
         
         $result = $model->insertSite(
             $_POST['nombre'],

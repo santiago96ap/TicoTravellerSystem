@@ -2,9 +2,9 @@
 
 $("#send-info").click(function () {
 
-	//var file = document.getElementById("myfile").files[0];
+	var file = document.getElementById("myfile").files[0];
     var datas = new FormData();
-	datas.append('file', "file");
+	datas.append('file', file);
 	datas.append('nombre', $("#nombre").val());
 	datas.append('direccion', $("#direccion").val());
 	datas.append('descripcion', $("#descripcion").val());
@@ -27,9 +27,11 @@ $("#send-info").click(function () {
         success: function (response) {
             var data = JSON.parse(response);
             if (data.result === '1') {
-				alert("bien");
+				alert("Solicitud ejecutada correctamente");
+				setTimeout("location.href = '?controller=Index&action=registrarSitio';", 100);
             } else {
-               alert("mal");
+               alert("Solicitud ejecutada incorrectamente");
+               setTimeout("location.href = '?controller=Index&action=registrarSitio';", 100);
             }
         }
     });
