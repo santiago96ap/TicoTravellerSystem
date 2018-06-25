@@ -38,11 +38,11 @@ include_once 'public/header.php';
 
         <div class="contact_grid_right">
             <h6>Iniciar Sesión</h6>
-            <form action="#" method="post">
+            <form>
                 <div class="contact_left_grid">
-                    <input type="email" name="Email" placeholder="Correo electrónico" required="">
-                    <input type="text" name="pass" placeholder="contraseña" required=""><br><br>
-                    <input type="submit" value="Entrar" onclick="redireccionar();">
+                    <input type="email" name="userName" id="userName" placeholder="Correo electrónico" required="">
+                    <input type="text" name="pass" id="pass" placeholder="contraseña" required=""><br><br>
+                    <input type="submit" id="send-info" value="Ingresar"/>
                     <input type="reset" value="Limpiar">
                     <div class="clearfix"> </div>
                 </div>
@@ -51,13 +51,11 @@ include_once 'public/header.php';
     </div>
 </section>
 
+<script src="public/js/jquery-3.2.1.min.js" type="text/javascript"></script>
+<script src="public/js/view/SessionView.js" type="text/javascript"></script>
+
 <?php
 include_once 'public/footer.php';
 ?>	
 
-<script>
-    function redireccionar(){
-        window.location.replace("?Controller=Index&action=indexADM");
-    }//redireccionar
-</script>
 

@@ -38,9 +38,9 @@ include_once 'public/header.php';
 
         <h2>Opciones para administrar los sitios turísticos</h2>   <br>
         <div class="list-group">
-            <a href="?Controller=Index&action=registrarSitio" class="list-group-item list-group-item-action list-group-item-success">Registrar sitios turísticos</a>
-            <a href="?Controller=Index&action=actModSitio" class="list-group-item list-group-item-action list-group-item-warning">Actualizar o eliminar sitios turísticos</a>
-            <a href="?Controller=Index&action=listarSitio" class="list-group-item list-group-item-action list-group-item-info">Listar sitios turísticos</a>
+            <a href="?controller=Index&action=registrarSitio" class="list-group-item list-group-item-action list-group-item-success">Registrar sitios turísticos</a>
+            <a href="?controller=Index&action=actModSitio" class="list-group-item list-group-item-action list-group-item-warning">Actualizar o eliminar sitios turísticos</a>
+            <a href="?controller=Index&action=listarSitio" class="list-group-item list-group-item-action list-group-item-info">Listar sitios turísticos</a>
         </div>
         <br>
     </div>

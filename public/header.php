@@ -40,7 +40,7 @@
         <header>
             <div class="header_top" id="home">
                 <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
-                    <a class="navbar-brand" href="?controlador=Index&accion=index">
+                    <a class="navbar-brand" href="?controller=Index&action=defaultAction">
                         <i class="fab fa-digital-ocean"></i> Tico Traveller</a>
                     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                             aria-expanded="false" aria-label="Toggle navigation">
@@ -49,29 +49,29 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav mx-auto tp-nav text-center">
                             <li class="nav-item active">
-                                <a class="nav-link" href="?Controller=Index&action=index">Inicio
+                                <a class="nav-link" href="?controller=Index&action=defaultAction">Inicio
                                     <span class="sr-only">(current)</span>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="?Controller=Index&action=preguntas">Recomendación</a>
+                                <a class="nav-link" href="?controller=Index&action=preguntas">Recomendación</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="?Controller=Index&action=contactenos">Contáctenos
+                                <a class="nav-link" href="?controller=Index&action=contactenos">Contáctenos
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="?Controller=Index&action=dondeEncontrar">¿Dónde encontrarnos?</a>
+                                <a class="nav-link" href="?controller=Index&action=dondeEncontrar">¿Dónde encontrarnos?</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="?Controller=Index&action=sitioInteres">Sitios de interés</a>
+                                <a class="nav-link" href="?controller=Index&action=sitioInteres">Sitios de interés</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="?Controller=Index&action=sobreNosotros">Sobre nosotros</a>
+                                <a class="nav-link" href="?controller=Index&action=sobreNosotros">Sobre nosotros</a>
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link" href="?Controller=Index&action=login">login</a>
+                                <a class="nav-link" href="?controller=Index&action=login">login</a>
                             </li>
                         </ul>
                     </div>
