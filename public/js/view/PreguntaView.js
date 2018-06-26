@@ -41,25 +41,21 @@
     }//cambiarOpcion
 
 $("#send-info").click(function () {
+    
+    var parameters = {
+        "typeDestination" : $("#ps3").val(),
+        "price" : $("#ps2").val(),
+        "preferencePlace" : $("#ps1").val(),
+        "time":  $("#ps4").val(),
+        "roadType":  $("#ps5").val()
+    };
 
-    alert($("#ps3").val());
+    $.post("?controller=Site&action=getSimilarity", parameters, function (data) {
 
-        var parameters = {
-            "typeDestination" : $("#ps3").val(),
-            "price" : $("#ps2").val(),
-            "preferencePlace" : $("#ps1").val(),
-            "time":  $("#ps4").val(),
-            "roadType":  $("#ps5").val()
-        };
-
-        $.post("?controller=Site&action=getSimilarity", parameters, function (data) {
-
-            alert(data);
-
-            for (var i = 0; i < data.length; i++) {
-                alert(data[i].name);
-            }
-        }, "json");
+        for (var i = 0; i < data.length; i++) {
+            alert(data[i].name);
+        }
+    }, "json");
 
 });
 
