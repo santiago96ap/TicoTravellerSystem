@@ -34,6 +34,21 @@
        
         
         <link href="//fonts.googleapis.com/css?family=Poppins:100i,200,200i,300,400,400i,500,500i,600,600i,700,700i,800" rel="stylesheet">
+
+        <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        height: 100%;
+        float: center;
+        width: 60%;
+        height: 30%;
+        padding-left: 20px;
+      }
+    </style>
     </head>
 
     <body>

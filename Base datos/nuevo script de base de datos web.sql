@@ -748,7 +748,7 @@ CREATE PROCEDURE sp_get_destination(
     id_destination INTEGER
 )
 BEGIN
-    SELECT tb_destinations.id, name, address, description, x, y, image, price, preference_place, destination_type, travel_time, road_type
+    SELECT tb_destinations.id, name, address, description, x, y, image, price, preference_place, destination_type, travel_time, road_type,class
     FROM tb_value_destinations, tb_destinations 
     where tb_value_destinations.id = tb_destinations.id AND id_destination=tb_destinations.id;
 END $$
