@@ -56,9 +56,9 @@ $("#send-info").click(function () {
 
             alert(data);
 
-            for (var i = 0; i < data.length; i++) {
+            /*for (var i = 0; i < data.length; i++) {
                 alert(data[i].name);
-            }
+            }*/
         }, "json");
 
 });
