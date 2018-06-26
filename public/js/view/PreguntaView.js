@@ -64,26 +64,19 @@
                 type:  'post',
                 beforeSend: function () {},
                 success:  function (response) {
-
-                    var prod = JSON.parse(response);
-
-                    alert(prod);
+                	//alert(response);
 
                     /*
-						  name varchar(200) not null,
-						  address varchar(500)not null,
-						  description varchar(800), 
-						  x varchar(50),
-						  y varchar(50),
-						  image varchar(500)
+						  name
+						  address
+						  description 
+						  x
+						  y
+						  image
 						$("#mi_imagen").attr("src","img/origen_2.jpg");
                     */
+                  
 
-       				 for (var i = 0; i < prod["Data"].length; i++) {
-       				 	alert(
-       				 		prod.Data[i]
-       				 		);
-       				 }//for
                 }
         });
 
