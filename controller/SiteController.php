@@ -77,17 +77,18 @@ class SiteController {
      * turisticos alojados en la base de datos
      */
     function getCategorySites($price, $preferencePlace, $destinationType, $time, $road) {
+        //echo $price.$preferencePlace.$destinationType.$time.$road;
         require 'model/SiteModel.php';
         $model = new SiteModel();
         $result = $model->getCategorySites($price, $preferencePlace, $destinationType, $time, $road);      
-        return $result;
+        echo json_encode($result);
     }
 
     function getAllSites() {
         require 'model/SiteModel.php';
         $model = new SiteModel();
         $result = $model->getAllSites();      
-        return $result;
+        echo json_encode($result);
     }
 
     /*El siguiente método es el encargado de realizar el cálculo según el algoritmo de Euclides.
