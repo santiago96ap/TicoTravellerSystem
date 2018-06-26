@@ -42,13 +42,14 @@
 
 
     function enviarDatosRecomendacion(){
-
-        alert(
+        /*alert(
             " \n typeDestination: "+ $("#ps1").val() +
             " \n preferencePlace: "+  $("#ps2").val()
             + " \n price:" + $("#ps3").val() 
             + " \n time:" + $("#ps4").val() 
             +  " \n roadType:" + $("#ps5").val());
+
+           */
 
         var parametros = {
             "typeDestination" : $("#ps1").val(),
@@ -63,7 +64,26 @@
                 type:  'post',
                 beforeSend: function () {},
                 success:  function (response) {
-                    alert(response);
+
+                    var prod = JSON.parse(response);
+
+                    alert(prod);
+
+                    /*
+						  name varchar(200) not null,
+						  address varchar(500)not null,
+						  description varchar(800), 
+						  x varchar(50),
+						  y varchar(50),
+						  image varchar(500)
+						$("#mi_imagen").attr("src","img/origen_2.jpg");
+                    */
+
+       				 for (var i = 0; i < prod["Data"].length; i++) {
+       				 	alert(
+       				 		prod.Data[i]
+       				 		);
+       				 }//for
                 }
         });
 

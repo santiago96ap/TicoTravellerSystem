@@ -271,20 +271,183 @@ include_once 'public/header.php';
         <button type="submit" class="btn btn-info" onclick="enviarDatosRecomendacion();">Finalizar</button>
     </div>
 </section>
-
+<!--PAGINACIÓN-->
 <div class="container">
 
-        <ul class="pagination">
-            <li class="page-item"><a class="page-link" onclick="cambiarOpcion('1');">1</a></li>
-            <li class="page-item"><a class="page-link" onclick="cambiarOpcion('2');">2</a></li>
-            <li class="page-item"><a class="page-link" onclick="cambiarOpcion('3');">3</a></li>            
-            <li class="page-item"><a class="page-link" onclick="cambiarOpcion('4');">4</a></li>
-            <li class="page-item"><a class="page-link" onclick="cambiarOpcion('5');">5</a></li>
-        </ul>
-
-
+    <ul class="pagination">
+        <li class="page-item"><a class="page-link" onclick="cambiarOpcion('1');">1</a></li>
+        <li class="page-item"><a class="page-link" onclick="cambiarOpcion('2');">2</a></li>
+        <li class="page-item"><a class="page-link" onclick="cambiarOpcion('3');">3</a></li>            
+        <li class="page-item"><a class="page-link" onclick="cambiarOpcion('4');">4</a></li>
+        <li class="page-item"><a class="page-link" onclick="cambiarOpcion('5');">5</a></li>
+    </ul>
 </div> 
- <script src="public/js/jquery-3.2.1.min.js" type="text/javascript"></script>
+
+<!--Recomendación-->
+<section id="resultado" class="services" >
+    <div class="container">
+        <h3 class="tittle_w3ls">Te hemos recomendado los siguientes sitios</h3>
+        <div id="sitio1" class="row inner-sec-w3layouts-agileinfo">
+            <h4>Sitio 1</h4>
+            <div class="contact-map">
+
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15721.342388382782!2d-83.69054317925048!3d9.905981986649515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0d69b084d750d%3A0x7cb6a6e23ed66ac9!2sProvincia+de+Cartago%2C+Turrialba!5e0!3m2!1ses!2scr!4v1524682739191"
+                        class="map" style="border:0" allowfullscreen=""></iframe>
+            </div>
+            <button id="btnSite1" type="button" class="btn btn-info" data-toggle="modal" data-target="#modalSite1">
+                Ver más
+            </button>         
+        </div>
+        
+        <div id="sitio2" class="row inner-sec-w3layouts-agileinfo">
+            <h4>Sitio 2</h4>
+            <div class="contact-map">
+
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15721.342388382782!2d-83.69054317925048!3d9.905981986649515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0d69b084d750d%3A0x7cb6a6e23ed66ac9!2sProvincia+de+Cartago%2C+Turrialba!5e0!3m2!1ses!2scr!4v1524682739191"
+                        class="map" style="border:0" allowfullscreen=""></iframe>
+            </div>
+             <button id="btnSite2" type="button" class="btn btn-info" data-toggle="modal" data-target="#modalSite2">
+                Ver más
+            </button>            
+        </div>
+        
+        <div id="sitio3" class="row inner-sec-w3layouts-agileinfo">
+            <h4>Sitio 3</h4>
+            <div class="contact-map">
+
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15721.342388382782!2d-83.69054317925048!3d9.905981986649515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0d69b084d750d%3A0x7cb6a6e23ed66ac9!2sProvincia+de+Cartago%2C+Turrialba!5e0!3m2!1ses!2scr!4v1524682739191"
+                        class="map" style="border:0" allowfullscreen=""></iframe>
+            </div>
+             <button id="btnSite3" type="button" class="btn btn-info" data-toggle="modal" data-target="#modalSite3">
+                Ver más
+            </button>            
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Modal Sitio 1 -->
+<div class="modal fade" id="modalSite1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Sitio número 1</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h2 class="font-weight-bold text-center" id="tituloSitio1">Titulo sitio 2</h2>
+        <h6 class="font-italic text-center" id="direccionSitio1">Dirección</h6>
+        <p id="descSitio1" class="font-weight-light text-justify">Descripción sitio 2</p>
+        <center>
+            <button id="videoSitio1" type="button" class="btn btn-outline-info ">Video</button>
+        </center>
+        
+            <div class="row inner-sec-w3layouts-agileinfo">
+            <div class="col-md-4 proj_gallery_grid" data-aos="zoom-in"></div>
+            <div class="col-md-4 proj_gallery_grid" data-aos="zoom-in">
+                <div class="section_1_gallery_grid">
+                    <a title="Rural" href="public/images/p4Tiempo.png">
+                        <div class="section_1_gallery_grid1">
+                            <img id="imgSitio1" src="public/images/p4Tiempo.png" alt=" " class="img-responsive" />
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4 proj_gallery_grid" data-aos="zoom-in"></div>
+        </div>
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Sitio 2 -->
+<div class="modal fade" id="modalSite2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Sitio número 2</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h2 class="font-weight-bold text-center" id="tituloSitio2">Titulo sitio 2</h2>
+        <h6 class="font-italic text-center" id="direccionSitio2">Dirección</h6>
+        <p id="descSitio2" class="font-weight-light text-justify">Descripción sitio 2</p>
+        <center>
+            <button id="videoSitio2" type="button" class="btn btn-outline-info ">Video</button>
+        </center>
+        
+            <div class="row inner-sec-w3layouts-agileinfo">
+            <div class="col-md-4 proj_gallery_grid" data-aos="zoom-in"></div>
+            <div class="col-md-4 proj_gallery_grid" data-aos="zoom-in">
+                <div class="section_1_gallery_grid">
+                    <a title="Rural" href="public/images/p4Tiempo.png">
+                        <div class="section_1_gallery_grid1">
+                            <img id="imgSitio2"  src="public/images/p4Tiempo.png" alt=" " class="img-responsive" />
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4 proj_gallery_grid" data-aos="zoom-in"></div>
+        </div>
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Sitio 3 -->
+<div class="modal fade" id="modalSite3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Sitio número 3</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h2 class="font-weight-bold text-center" id="tituloSitio3">Titulo sitio 3</h2>
+        <h6 class="font-italic text-center" id="direccionSitio3">Dirección</h6>
+        <p id="descSitio3" class="font-weight-light text-justify">Descripción sitio 3</p>
+        <center>
+            <button id="videoSitio3" type="button" class="btn btn-outline-info ">Video</button>
+        </center>
+        
+            <div class="row inner-sec-w3layouts-agileinfo">
+            <div class="col-md-4 proj_gallery_grid" data-aos="zoom-in"></div>
+            <div class="col-md-4 proj_gallery_grid" data-aos="zoom-in">
+                <div class="section_1_gallery_grid">
+                    <a title="Rural" href="public/images/p4Tiempo.png">
+                        <div class="section_1_gallery_grid1">
+                            <img id="imgSitio3" src="public/images/p4Tiempo.png" alt=" " class="img-responsive" />
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4 proj_gallery_grid" data-aos="zoom-in"></div>
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="public/js/jquery-3.2.1.min.js" type="text/javascript"></script>
 <script src="public/js/view/PreguntaView.js" type="text/javascript"></script> 
 
 <?php

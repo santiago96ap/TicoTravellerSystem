@@ -33,44 +33,7 @@ include_once 'public/header.php';
 </div>
 <!--//model-->
 <!--/contact-->
-<section class="services">
-    <div class="container">
-        <h3 class="tittle_w3ls">Te hemos recomendado los siguientes sitios</h3>
-        <div class="row inner-sec-w3layouts-agileinfo">
-            <h4>Sitio 1</h4>
-            <div class="contact-map">
 
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15721.342388382782!2d-83.69054317925048!3d9.905981986649515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0d69b084d750d%3A0x7cb6a6e23ed66ac9!2sProvincia+de+Cartago%2C+Turrialba!5e0!3m2!1ses!2scr!4v1524682739191"
-                        class="map" style="border:0" allowfullscreen=""></iframe>
-            </div>
-            <p>Información del sitio</p>			
-        </div>
-        
-        <div class="row inner-sec-w3layouts-agileinfo">
-            <h4>Sitio 2</h4>
-            <div class="contact-map">
-
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15721.342388382782!2d-83.69054317925048!3d9.905981986649515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0d69b084d750d%3A0x7cb6a6e23ed66ac9!2sProvincia+de+Cartago%2C+Turrialba!5e0!3m2!1ses!2scr!4v1524682739191"
-                        class="map" style="border:0" allowfullscreen=""></iframe>
-            </div>
-            <p>Información del sitio</p>			
-        </div>
-        
-        <div class="row inner-sec-w3layouts-agileinfo">
-            <h4>Sitio 3</h4>
-            <div class="contact-map">
-
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15721.342388382782!2d-83.69054317925048!3d9.905981986649515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0d69b084d750d%3A0x7cb6a6e23ed66ac9!2sProvincia+de+Cartago%2C+Turrialba!5e0!3m2!1ses!2scr!4v1524682739191"
-                        class="map" style="border:0" allowfullscreen=""></iframe>
-            </div>
-            <p>Información del sitio</p>			
-        </div>
-        <center>
-              <a href="?controlador=Default&accion=preguntas" class="btn btn-info">Volver al cuestionario</a>
-        </center>
-        
-    </div>
-</section>
 <!--//contact-->
 
 <?php
