@@ -76,6 +76,13 @@ class SiteController {
      * El metodo se encarga de obtener toda la informacion relacionada a todos los sitios 
      * turisticos alojados en la base de datos
      */
+    function getCategorySites($price, $preferencePlace, $destinationType, $time, $road) {
+        require 'model/SiteModel.php';
+        $model = new SiteModel();
+        $result = $model->getCategorySites($price, $preferencePlace, $destinationType, $time, $road);      
+        return $result;
+    }
+
     function getAllSites() {
         require 'model/SiteModel.php';
         $model = new SiteModel();
@@ -110,9 +117,12 @@ class SiteController {
      * ingresadas por el usuario, para despues retornarlos y enviarlos a la aplicacion movil
      */
     public function getSimilarity() {
-        if(isset($_REQUEST['price']) && isset($_REQUEST['typeDestination']) && isset($_REQUEST['roadType']) && isset($_REQUEST['time']) && isset($_REQUEST['preferencePlace'])){       
-            $sites = $this->getAllSites();
-            $userData = array($_REQUEST['price'], $_REQUEST['typeDestination'], $_REQUEST['roadType'], $_REQUEST['time'], $_REQUEST['preferencePlace']);
+        //if(isset($_REQUEST['price']) && isset($_REQUEST['typeDestination']) && isset($_REQUEST['roadType']) && isset($_REQUEST['time']) && isset($_REQUEST['preferencePlace'])){       
+            
+            $userData = array('e', 'b', 'p', 'b', 'r');
+            //$sites = $this->getAllSites('e', 'r', 'b', 'b', 'p');
+            $sites = $this->getCategorySites('c', 'u', 'y', 'a', 'v');
+            //$userData = array($_REQUEST['price'], $_REQUEST['typeDestination'], $_REQUEST['roadType'], $_REQUEST['time'], $_REQUEST['preferencePlace']);
 
             foreach ($sites as $temp) {
                 $valueSite = array($temp['price'], $temp['destination_type'], $temp['road_type'], $temp['travel_time'], $temp['preference_place']);
@@ -123,7 +133,7 @@ class SiteController {
                 unset($valueSite);
             }//foreach
 
-            $json=array();
+           $json=array();
 
             foreach ($this->positions as $datos2) {
                 foreach ($datos2 as $datos3) {
@@ -139,8 +149,9 @@ class SiteController {
                     }                  
                 }
             }
+
             echo json_encode($json);
-        }//if
+       // }//if
     }//getAllSites
     
     /*
@@ -175,7 +186,33 @@ class SiteController {
 
     /*****************************APLICACIÓN WEB***************************/
 
-    
+    public function searchSite() {
+        //if(isset($_REQUEST['name'])){       
+            //$siteName = array($_REQUEST['name']);
+            $siteName = array('parque nacional');
+            $first = true;
+            $numAnterior; $arrayTemp; $finalSite;
+            $registros = $this->getAllSites();
+
+            $numAnterior =0;
+            foreach ($registros as $temp) {
+                $arrayTemp = array($temp['name']);
+                $num = $this->euclidenDistance($siteName, $arrayTemp);
+                
+                if($first){
+                    $numAnterior = $num;
+                    $finalSite = $temp;
+                    $first = false;
+                }else if($num <= $numAnterior){
+                    $numAnterior = $num;
+                    $finalSite = $temp;
+                }//if
+                unset($arrayTemp);
+            }//foreach
+            
+            echo json_encode($finalSite);
+       // }//if
+    }//searchSite
 
 
 

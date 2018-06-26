@@ -38,6 +38,16 @@ class SiteModel {
     }
     
      /*
+     * Se encarga de obtener toda la informacion de todos los sitios de la DB que pertenecen a la misma categoría que los datos actuales
+     */
+    public function getCategorySites($price, $preferencePlace, $destinationType, $time, $road) {
+        $query = $this->db->prepare("call sp_recommend_destination('$price','$preferencePlace','$destinationType','$time','$road')");
+        $query->execute();
+        $result = $query->fetchAll();
+        return $result;
+    }
+
+    /*
      * Se encarga de obtener toda la informacion de todos los sitios de la DB
      */
     public function getAllSites() {
