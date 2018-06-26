@@ -268,7 +268,7 @@ include_once 'public/header.php';
             </select>
         </div>
 
-        <button type="submit" class="btn btn-info" onclick="enviarDatosRecomendacion();">Finalizar</button>
+        <button type="button" class="btn btn-info" id="send-info">Finalizar</button>
     </div>
 </section>
 <!--PAGINACIÓN-->

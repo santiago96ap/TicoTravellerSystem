@@ -41,54 +41,28 @@
     }//cambiarOpcion
 
 
-    function enviarDatosRecomendacion(){
-        /*alert(
-            " \n typeDestination: "+ $("#ps1").val() +
-            " \n preferencePlace: "+  $("#ps2").val()
-            + " \n price:" + $("#ps3").val() 
-            + " \n time:" + $("#ps4").val() 
-            +  " \n roadType:" + $("#ps5").val());
+$("#send-info").click(function () {
 
-           */
+    alert($("#ps1").val());
 
-        var parametros = {
+        var parameters = {
             "typeDestination" : $("#ps1").val(),
             "price" : $("#ps2").val(),
             "preferencePlace" : $("#ps3").val(),
             "time":  $("#ps4").val(),
             "roadType":  $("#ps5").val()
         };
-        $.ajax({
-                data:  parametros,
-                url:   '?controller=Site&action=getSimilarity',
-                type:  'post',
-                beforeSend: function () {},
-                success:  function (response) {
 
-                    var prod = JSON.parse(response);
+        $.post("?controller=Site&action=getSimilarity", parameters, function (data) {
 
-                    alert(prod);
+            alert(data);
 
-                    /*
-						  name varchar(200) not null,
-						  address varchar(500)not null,
-						  description varchar(800), 
-						  x varchar(50),
-						  y varchar(50),
-						  image varchar(500)
-						$("#mi_imagen").attr("src","img/origen_2.jpg");
-                    */
+            for (var i = 0; i < data.length; i++) {
+                alert(data[i].name);
+            }
+        }, "json");
 
-       				 for (var i = 0; i < prod["Data"].length; i++) {
-       				 	alert(
-       				 		prod.Data[i]
-       				 		);
-       				 }//for
-                }
-        });
-
-
-    }//enviarDatosRecomendacion
+});
 
 
 

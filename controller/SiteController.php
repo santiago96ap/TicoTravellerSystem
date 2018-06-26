@@ -12,43 +12,6 @@ class SiteController {
         $this->view->show("indexView.php");
     }
 
-    function insertSite() {
-        require 'model/SiteModel.php';
-        $model = new SiteModel();
-
-        $file = $_FILES['file'];
-        $type = $file["type"];
-        $UrlTemp = $file["tmp_name"];
-        $folder = "public/img/";
-        $path="";
-        
-        if ($type != 'image/jpg' && $type != 'image/jpeg' && $type != 'image/png' && $type != 'image/gif') {
-            throw new Exception('');
-        }else {
-            $totalFiles = count(glob($folder . '{*.jpg,*.gif,*.png,*.jpeg}', GLOB_BRACE));
-            $typeTemp = explode('/', $type);
-            $src = $folder.$totalFiles.'.'.$typeTemp[1];
-            $path=$totalFiles.'.'.$typeTemp[1];
-            move_uploaded_file($UrlTemp, $src);
-        }
-        
-        $result = $model->insertSite(
-            $_POST['nombre'],
-            $_POST['direccion'],
-            $_POST['descripcion'],
-            $_POST['x'],
-            $_POST['y'],
-            $_POST['tipoPrecio'],
-            $_POST['lugarPreferencia'],
-            $_POST['tipoDestino'],
-            $_POST['tiempo'],
-            $_POST['tipoCamino'],
-            $_POST['categoria'],
-            $path
-        );      
-        echo json_encode($result);
-    }
-
     /*****************************************APLICACIÓN ANDROID********************************************/
 
     /*
