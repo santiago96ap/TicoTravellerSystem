@@ -75,9 +75,9 @@ include_once 'public/header.php';
 
         <div class="form-group">
             <label for="sel1">De las ilustraciones anteriores. ¿Cúal prefiere?</label>
-            <select class="form-control" id="p1">
-                <option selected="selected">Rural</option>
-                <option>Urbano</option>
+            <select class="form-control" id="ps1">
+                <option selected="selected" value="r">Rural</option>
+                <option value="u">Urbano</option>
             </select>
         </div>
 
@@ -114,10 +114,10 @@ include_once 'public/header.php';
 
         <div class="form-group">
             <label for="sel1">¿Cúal el tipo de destino que  prefiere?</label>
-            <select class="form-control" id="p2">
-                <option selected="selected">Económico</option>
-                <option>Intermedio</option>                
-                <option>Costoso</option>
+            <select class="form-control" id="ps2">
+                <option selected="selected" value="e">Económico</option>
+                <option value="i">Intermedio</option>                
+                <option value="c">Costoso</option>
 
             </select>
         </div>
@@ -175,11 +175,9 @@ include_once 'public/header.php';
 
         <div class="form-group">
             <label for="sel1">¿Cúal el tipo de destino que  prefiere?</label>
-            <select class="form-control" id="p3">
-                <option selected="selected">Playa</option>
-                <option>Montaña</option>                
-                <option>Centro turístico</option>
-
+            <select class="form-control" id="ps3">
+                <option selected="selected" value="y">Playa</option>
+                <option value="b">Montaña</option>                
             </select>
         </div>
     </div>
@@ -214,10 +212,10 @@ include_once 'public/header.php';
 
         <div class="form-group">
             <label for="sel1">¿Cuánto tiempor tiene pensado durar en el viaje?</label>
-            <select class="form-control" id="p4">
-                <option selected="selected">Menos de una hora</option>
-                <option>1-2 horas</option>                
-                <option>3-más horas</option>
+            <select class="form-control" id="ps4">
+                <option selected="selected" value="a">Menos de una hora</option>
+                <option value="b">1-2 horas</option>                
+                <option value="c">3-más horas</option>
 
             </select>
         </div>
@@ -264,13 +262,13 @@ include_once 'public/header.php';
 
         <div class="form-group">
             <label for="sel1">De las ilustraciones anteriores. ¿Cúal prefiere?</label>
-            <select class="form-control" id="p5">
-                <option selected="selected">Asfalto</option>
-                <option>Lastre</option>
+            <select class="form-control" id="ps5">
+                <option selected="selected" value="v">Asfalto</option>
+                <option value="p">Lastre</option>
             </select>
         </div>
 
-        <button type="submit" class="btn btn-info" onclick="cambiarOpcion('6');">Finalizar</button>
+        <button type="submit" class="btn btn-info" onclick="enviarDatosRecomendacion();">Finalizar</button>
     </div>
 </section>
 
@@ -286,94 +284,11 @@ include_once 'public/header.php';
 
 
 </div> 
-
+ <script src="public/js/jquery-3.2.1.min.js" type="text/javascript"></script>
+<script src="public/js/view/PreguntaView.js" type="text/javascript"></script> 
 
 <?php
 include_once 'public/footer.php';
 ?>
 
-<script>
-    function cambiarOpcion(opcion) {
-        switch (opcion) {
-            case "1":
-                $('#p1').show(); //muestro mediante id
-                $('#p2').hide(); //oculto mediante id       
-                $('#p3').hide(); //oculto mediante id
-                $('#p4').hide(); //oculto mediante id                
-                $('#p5').hide(); //oculto mediante id
-                break;
-            case "2":
-                $('#p2').show(); //muestro mediante id
-                $('#p1').hide(); //oculto mediante id       
-                $('#p3').hide(); //oculto mediante id
-                $('#p4').hide(); //oculto mediante id                
-                $('#p5').hide(); //oculto mediante id
-                break;
-            case "3":
-                $('#p3').show(); //muestro mediante id
-                $('#p2').hide(); //oculto mediante id       
-                $('#p1').hide(); //oculto mediante id
-                $('#p4').hide(); //oculto mediante id                
-                $('#p5').hide(); //oculto mediante id
-                break;
-            case "4":
-                $('#p4').show(); //muestro mediante id
-                $('#p2').hide(); //oculto mediante id       
-                $('#p3').hide(); //oculto mediante id
-                $('#p1').hide(); //oculto mediante id                
-                $('#p5').hide(); //oculto mediante id
-                break;
-            case "5":
-                $('#p5').show(); //muestro mediante id
-                $('#p2').hide(); //oculto mediante id       
-                $('#p3').hide(); //oculto mediante id
-                $('#p4').hide(); //oculto mediante id                
-                $('#p1').hide(); //oculto mediante id
-                break;
-            case "6":
-                window.location.replace("?Controller=Index&action=resultadoRecomendacion");
-                break;
-            default:
-                break;
-        }//switch
-    }//cambiarOpcion
-
-
-    function enviarDatosRecomendacion(){
-
-        var parametros = {
-            "p1" : $("#p1").val(),
-            "p2" : $("#p2").val(),
-            "p3" : $("#p3").val(),
-            "p4":  $("#p4").val(),
-            "p5":  $("#p5").val()
-        };
-        $("#resultado").empty();
-        $.ajax({
-                data:  parametros,
-                url:   '?Controller=Site&action=getSimilarity"',
-                type:  'post',
-                beforeSend: function () {
-
-                    var progreso = 0;
-                    var idIterval = setInterval(function(){
-                      progreso +=20;
-                      $('#bar').css('width', progreso + '%');
-                      if(progreso == 100){
-                        clearInterval(idIterval);
-                      }
-                    },100);
-
-                },
-                success:  function (response) {
-                    $("#resultado").append("Usted es de Red clase: "+response);
-                }
-        });
-
-
-
-
-    }//enviarDatosRecomendacion
-
-</script>
 
