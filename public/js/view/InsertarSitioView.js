@@ -1,4 +1,10 @@
-
+var activateUpdate = false;
+var activeInsert = false;
+var indexAtributtes = 0;
+var duration = 0;
+var markers = [];
+var originLatitude, originLongitude, destinyLatitude, destinyLongitude;
+var globalMap;
 
 $("#send-info").click(function () {
 
@@ -36,3 +42,36 @@ $("#send-info").click(function () {
         }
     });
 });
+
+$("#send-info-buscar").click(function () {
+
+    var address = '';
+    address = document.getElementById('ubicacion').value;
+    var geocoder = new google.maps.Geocoder();
+
+    geocoder.geocode({'address': address}, function (results, status) {
+        if (status === 'OK') {
+            globalMap.setCenter(results[0].geometry.location);
+
+            var marker = new google.maps.Marker({
+                map: globalMap,
+                position: results[0].geometry.location
+            });
+            markers.push(marker);
+
+            document.getElementById("x").value = results[0].geometry.location.lat();
+            document.getElementById("y").value = results[0].geometry.location.lng();
+        } else {
+            alert("Error al buscar la ubicacion");
+        }
+    });
+
+});
+
+function initMap() {
+    var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 12,
+        center: {lat: -34.397, lng: 150.644}
+    });
+    globalMap = map;
+}

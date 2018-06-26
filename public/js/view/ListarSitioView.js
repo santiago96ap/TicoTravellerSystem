@@ -15,8 +15,6 @@ $("#allSites").change(function () {
 	        	document.getElementById("nombre").value = data.name;
 	        	document.getElementById("direccion").value = data.address;
 	        	document.getElementById("descripcion").value = data.description;
-	        	document.getElementById("x").value = data.x;
-	        	document.getElementById("x").value = data.y;
 
 	        	document.getElementById("tipoPrecio").value = data.price;
 	        	document.getElementById("lugarPreferencia").value = data.preference_place;
@@ -27,7 +25,9 @@ $("#allSites").change(function () {
 
 	        	document.getElementById("imagen").src = data.image;
 
-	        	var myLatLng = {lat: data.x, lng: data.y};
+	        	var myLatLng = {lat: parseFloat(data.x), lng: parseFloat(data.y)};
+
+	        	globalMap.setCenter(myLatLng);
 
 	        	var marker = new google.maps.Marker({
 	                map: globalMap,
@@ -44,7 +44,7 @@ $("#allSites").change(function () {
 
 function initMap() {
     var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 8,
+        zoom: 12,
         center: {lat: -34.397, lng: 150.644}
     });
     globalMap = map;

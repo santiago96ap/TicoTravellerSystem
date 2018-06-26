@@ -48,14 +48,6 @@ include_once 'public/header.php';
                     <input placeholder="Descripci&oacute;n..." type="text" class="form-control" id="descripcion" readonly>
                 </div>
 
-                <div class="form-group form-check">
-                    <label for="exampleFormControlSelect1">X</label>
-                    <input placeholder="Cordena X..." type="text" class="form-control" id="x" readonly>
-                </div>
-                <div class="form-group form-check">
-                    <label for="exampleFormControlSelect1">Y</label>
-                    <input placeholder="Cordena Y..." type="text" class="form-control" id="y" readonly>
-                </div>
                 <div class="form-group">
                     <label for="exampleFormControlSelect1">Tipo de precio</label>
                     <input placeholder="Tipo de precio..." type="text" class="form-control" id="tipoPrecio" readonly>
@@ -84,6 +76,9 @@ include_once 'public/header.php';
 
                 <div class="form-group">
                     <label for="exampleFormControlSelect1">Im&aacute;gen del sitio</label>
+                </div>
+
+                <div class="form-group">
                     <img src="public/images/logo.png" id="imagen" height="100" width="100">
                 </div>
 

@@ -42,11 +42,12 @@
         padding: 0;
       }
       #map {
-        height: 100%;
+        height: 20%;
         float: center;
         width: 60%;
-        height: 30%;
-        margin-left: 60px;
+        height: 50%;
+        margin-left: 100px;
+        margin-bottom: 10px;
       }
     </style>
     </head>

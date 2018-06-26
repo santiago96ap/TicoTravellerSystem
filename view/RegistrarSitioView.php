@@ -26,12 +26,6 @@ include_once 'public/header.php';
                     <input placeholder="Descripci&oacute;n..." type="text" class="form-control" id="descripcion">
                 </div>
 
-                <div class="form-group form-check">
-                    <input placeholder="Cordena X..." type="text" class="form-control" id="x">
-                </div>
-                <div class="form-group form-check">
-                    <input placeholder="Cordena Y..." type="text" class="form-control" id="y">
-                </div>
                 <div class="form-group">
                     <label for="exampleFormControlSelect1">Tipo de precio</label>
                     <select class="form-control" id="tipoPrecio">
@@ -80,19 +74,52 @@ include_once 'public/header.php';
                     </select>
                 </div>
 
-                <div class="input-group">
-                    <div class="custom-file">
-                         <input type="file" class="custom-file-input" id="myfile" name="myfile" size="30">
-                        <label class="custom-file-label" for="inputGroupFile04">Elegir una im&aacute;gen</label> 
-                    </div>
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">Seleccionar im&aacute;gen</label>
                 </div>
-                <input type="button" class="btn btn-primary" id="send-info" value="Ingresar"/>
+
+                <div class="form-group">
+                    <input type="file" id="myfile" name="myfile" size="30">
+                </div>
+
+                <div class="form-group">
+                    <input placeholder="Ubicaci&oacute;n..." type="text" class="form-control" id="ubicacion">
+                </div>
+
+                <div class="form-group">
+                    <input type="button" class="btn btn-primary" id="send-info-buscar" value="Buscar"/>
+                </div>
+
+                <div class="form-group form-check">
+                    <input placeholder="Cordena X..." type="text" class="form-control" id="x" readonly="">
+                </div>
+                <div class="form-group form-check">
+                    <input placeholder="Cordena Y..." type="text" class="form-control" id="y" readonly="">
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+<div id="map"></div>
+
+<section>
+    <div class="container">
+
+        <div class="col-8">
+            <form>
+                <div class="form-group">
+                    <input type="button" class="btn btn-primary" id="send-info" value="Registrar"/>
+                </div>
             </form>
         </div>
     </div>
 </section>
 
  <script src="public/js/jquery-3.2.1.min.js" type="text/javascript"></script>
+ <script async defer
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC1JuYmoq83Om5mLz0qyg_k1viClteC2NU&callback=initMap"></script>
+</script>
 <script src="public/js/view/InsertarSitioView.js" type="text/javascript"></script> 
 
 <?php
