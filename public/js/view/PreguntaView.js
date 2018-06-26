@@ -42,12 +42,12 @@
 
 $("#send-info").click(function () {
 
-    alert("llego");
+    alert($("#ps3").val());
 
         var parameters = {
-            "typeDestination" : $("#ps1").val(),
+            "typeDestination" : $("#ps3").val(),
             "price" : $("#ps2").val(),
-            "preferencePlace" : $("#ps3").val(),
+            "preferencePlace" : $("#ps1").val(),
             "time":  $("#ps4").val(),
             "roadType":  $("#ps5").val()
         };

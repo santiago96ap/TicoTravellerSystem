@@ -86,16 +86,9 @@ class SiteController {
             $typeDestination =  $_POST['typeDestination'];
             $roadType = $_POST['roadType'];
             $time = $_POST['time'];
-            $preferencePlace = $_POST['preferencePlace'];
-            
+            $preferencePlace = $_POST['preferencePlace'];           
             $userData = array($price, $typeDestination, $roadType, $time, $preferencePlace);
-
-            //$userData = array('e', 'b', 'p', 'a', 'u');
-                
             $sites = $this->getCategorySites($price, $preferencePlace, $typeDestination, $time, $roadType);
-
-            //$sites = $this->getCategorySites('e', 'r', 'b', 'a', 'p');
-
             foreach ($sites as $temp) {
                 $valueSite = array($temp['price'], $temp['destination_type'], $temp['road_type'], $temp['travel_time'], $temp['preference_place']);
                 $site = array($temp['id'], $temp['name'], $temp['address'], $temp['description'], $temp['x'], $temp['y'], $temp['image']);
@@ -121,9 +114,7 @@ class SiteController {
                     }                  
                 }
             }
-            echo json_encode($sites);
-        }else{
-            echo json_encode("vacio");
+            echo json_encode($json);
         }
     }//getAllSites
     
