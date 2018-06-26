@@ -82,10 +82,9 @@ class SiteController {
     public function getSimilarity() {
         if(isset($_REQUEST['price']) && isset($_REQUEST['typeDestination']) && isset($_REQUEST['roadType']) && isset($_REQUEST['time']) && isset($_REQUEST['preferencePlace'])){       
             
-            $userData = array('e', 'b', 'p', 'b', 'r');
-            //$sites = $this->getAllSites('e', 'r', 'b', 'b', 'p');
-            $sites = $this->getCategorySites('c', 'u', 'y', 'a', 'v');
-            //$userData = array($_REQUEST['price'], $_REQUEST['typeDestination'], $_REQUEST['roadType'], $_REQUEST['time'], $_REQUEST['preferencePlace']);
+            $userData = array($_REQUEST['price'], $_REQUEST['typeDestination'], $_REQUEST['roadType'], $_REQUEST['time'], $_REQUEST['preferencePlace']);
+            
+            $sites = $this->getCategorySites($_REQUEST['price'], $_REQUEST['preferencePlace'], $_REQUEST['typeDestination'], $_REQUEST['time'], $_REQUEST['roadType']$_REQUEST['roadType']);
 
             foreach ($sites as $temp) {
                 $valueSite = array($temp['price'], $temp['destination_type'], $temp['road_type'], $temp['travel_time'], $temp['preference_place']);
@@ -114,7 +113,6 @@ class SiteController {
             }
 
             echo json_encode($json);
-       }//if
     }//getAllSites
     
     /*
