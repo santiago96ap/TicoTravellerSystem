@@ -9,27 +9,6 @@ class SiteModel {
         $this->db = SPDO::singleton();
     }
 
-    public function insertSite($nombre,$direccion,$descripcion,$x,$y,$tipoPrecio,$lugarPreferencia,$tipoDestino,$tiempo,$tipoCamino,$categoria,$imagen) {
-        $query = $this->db->prepare("call sp_insert('$tipoPrecio','$lugarPreferencia','$tipoDestino','$tiempo','$tipoCamino','$categoria','$nombre','$direccion','$descripcion','$x','$y','$imagen')");
-        $query->execute();
-        $result = $query->fetch();
-        return $result;
-    }
-
-    public function deleteSite($id) {
-        $query = $this->db->prepare("call sp_delete('$id')");
-        $query->execute();
-        $result = $query->fetch();
-        return $result;
-    }
-
-    public function updateSite($nombre,$direccion,$descripcion,$x,$y,$tipoPrecio,$lugarPreferencia,$tipoDestino,$tiempo,$tipoCamino,$categoria,$imagen,$id) {
-        $query = $this->db->prepare("call sp_insert('$id','$tipoPrecio','$lugarPreferencia','$tipoDestino','$tiempo','$tipoCamino','$categoria','$nombre','$direccion','$descripcion','$x','$y','$imagen')");
-        $query->execute();
-        $result = $query->fetch();
-        return $result;
-    }
-
     /*
      * Se encarga de obtener todos los nombres de los sitios de la DB
      */

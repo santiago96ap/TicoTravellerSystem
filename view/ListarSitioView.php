@@ -5,108 +5,95 @@ include_once 'public/header.php';
 </div>
 <ol class="breadcrumb">
     <li class="breadcrumb-item">
-        <a href="?Controller=Index&action=indexADM">Home</a>
+        <a href="?controller=Index&action=indexADM">Inicio</a>
     </li>
-    <li class="breadcrumb-item active">Inicio Admnistrador</li>
+    <li class="breadcrumb-item active">Registar Sitio</li>
 </ol>
-<!--/model-->
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Introduction Video</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body video">
-                <iframe src="https://player.vimeo.com/video/33531612"></iframe>
+<section>
+    <div class="container">
 
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
+        <div class="col-8">
+            <h2>Listar Sitios tur&iacute;sticos</h2><br>
+
+            <form>
+
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">Sitios Tur&iacute;stico</label>
+                    <select class="form-control" id="allSites">
+                    <option value="-1" data-tokens="">Seleccione un Sitio</option>
+                        <?php
+                        foreach ($vars as $var) {
+                            if (isset($var["id"])) {
+                                ?>
+                                <option value="<?php echo $var["id"] ?> " data-tokens="">
+                                    <?php echo $var["name"] ?>
+                                </option>
+                                <?php
+                            }
+                        }
+                        ?>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">Nombre</label>
+                    <input placeholder="Nombre..." type="text" class="form-control" id="nombre" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">Direcci&oacute;n</label>
+                    <input placeholder="Direcci&oacute;n..." type="text" class="form-control" id="direccion" readonly>
+                </div>
+                <div class="form-group form-check">
+                    <label for="exampleFormControlSelect1">Descripci&oacute;n</label>
+                    <input placeholder="Descripci&oacute;n..." type="text" class="form-control" id="descripcion" readonly>
+                </div>
+
+                <div class="form-group form-check">
+                    <label for="exampleFormControlSelect1">X</label>
+                    <input placeholder="Cordena X..." type="text" class="form-control" id="x" readonly>
+                </div>
+                <div class="form-group form-check">
+                    <label for="exampleFormControlSelect1">Y</label>
+                    <input placeholder="Cordena Y..." type="text" class="form-control" id="y" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">Tipo de precio</label>
+                    <input placeholder="Tipo de precio..." type="text" class="form-control" id="tipoPrecio" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">Lugar de preferencia</label>
+                    <input placeholder="Lugar de preferencia..." type="text" class="form-control" id="lugarPreferencia" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">Tipo de destino</label>
+                    <input placeholder="Tipo de destino..." type="text" class="form-control" id="tipoDestino" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">Tiempo</label>
+                    <input placeholder="Tiempo..." type="text" class="form-control" id="tiempo" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">Tipo de camino</label>
+                    <input placeholder="Tipo de camino..." type="text" class="form-control" id="tipoCamino" readonly>
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">Categoria</label>
+                    <input placeholder="Categoria..." type="text" class="form-control" id="categoria" readonly>
+                </div>
+
+                <div class="form-group">
+
+                </div>
+
+            </form>
         </div>
     </div>
-</div>
-<!--//model-->
-<section class="services">
-    <div class="container">
-        <h2>Sitios Turísticos registtados en el sistema</h2>
-        <p>A continuación, se le presentan los sitios turísticos que se han registrado previamente en el sistema.</p>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>Nombre</th>
-                    <th>Dirección</th>
-                    <th>Descripción</th>                    
-                    <th>Tipo precio</th>
-                    <th>Zona</th>
-                    <th>Tipo de destino</th>
-                    <th>Duración</th>
-                    <th>Camino</th>
-                </tr>
-            </thead>
-            <tbody>    
-                <tr class="table-primary">
-                    <td>Default</td>
-                    <td>Defaultson</td>
-                    <td>Default</td>
-                    <td>Default</td>
-                    <td>Default</td>
-                    <td>Default</td>
-                    <td>Default</td>
-                    <td>Default</td>
-                </tr>
-                <tr class="table-success">
-                   <td>Default</td>
-                    <td>Defaultson</td>
-                    <td>Default</td>
-                    <td>Default</td>
-                    <td>Default</td>
-                    <td>Default</td>
-                    <td>Default</td>
-                    <td>Default</td>
-                </tr>
-                <tr class="table-danger">
-                     <td>Default</td>
-                    <td>Defaultson</td>
-                    <td>Default</td>
-                    <td>Default</td>
-                    <td>Default</td>
-                    <td>Default</td>
-                    <td>Default</td>
-                    <td>Default</td>
-                </tr>
-                <tr class="table-info">
-                    <td>Default</td>
-                    <td>Defaultson</td>
-                    <td>Default</td>
-                    <td>Default</td>
-                    <td>Default</td>
-                    <td>Default</td>
-                    <td>Default</td>
-                    <td>Default</td>
-                </tr>
-                <tr class="table-warning">
-                     <td>Default</td>
-                    <td>Defaultson</td>
-                    <td>Default</td>
-                    <td>Default</td>
-                    <td>Default</td>
-                    <td>Default</td>
-                    <td>Default</td>
-                    <td>Default</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-
-
 </section>
+
+ <script src="public/js/jquery-3.2.1.min.js" type="text/javascript"></script>
+<script src="public/js/view/ListarSitioView.js" type="text/javascript"></script> 
 
 <?php
 include_once 'public/footer.php';
-?>
+?>  

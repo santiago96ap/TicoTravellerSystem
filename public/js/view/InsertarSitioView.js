@@ -22,7 +22,7 @@ $("#send-info").click(function () {
         contentType: false,
         cache: false,
         data: datas,
-        url: "?controller=Site&action=insertSite",
+        url: "?controller=Admin&action=insertSite",
         type: 'post',
         success: function (response) {
             var data = JSON.parse(response);
