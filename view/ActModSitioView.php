@@ -45,12 +45,6 @@ include_once 'public/header.php';
                     <input placeholder="Descripci&oacute;n..." type="text" class="form-control" id="descripcion">
                 </div>
 
-                <div class="form-group form-check">
-                    <input placeholder="Cordena X..." type="text" class="form-control" id="x">
-                </div>
-                <div class="form-group form-check">
-                    <input placeholder="Cordena Y..." type="text" class="form-control" id="y">
-                </div>
                 <div class="form-group">
                     <label for="exampleFormControlSelect1">Tipo de precio</label>
                     <select class="form-control" id="tipoPrecio">
@@ -99,11 +93,35 @@ include_once 'public/header.php';
                     </select>
                 </div>
 
-                <div class="input-group">
-                    <div class="custom-file">
-                         <input type="file" class="custom-file-input" id="myfile" name="myfile" size="30">
-                        <label class="custom-file-label" for="inputGroupFile04">Elegir una im&aacute;gen</label> 
-                    </div>
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">Im&aacute;gen del sitio</label>
+                </div>
+
+                <div class="form-group">
+                    <img src="public/images/logo.png" id="imagen" height="100" width="100">
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">Cambiar im&aacute;gen</label>
+                </div>
+
+                <div class="form-group">
+                    <input type="file" id="myfile" name="myfile" size="30">
+                </div>
+
+                <div class="form-group">
+                    <input placeholder="Cambiar Ubicaci&oacute;n..." type="text" class="form-control" id="ubicacion">
+                </div>
+
+                <div class="form-group">
+                    <input type="button" class="btn btn-primary" id="send-info-buscar" value="Buscar"/>
+                </div>
+
+                <div class="form-group form-check">
+                    <input placeholder="Cordena X..." type="text" class="form-control" id="x" readonly="">
+                </div>
+                <div class="form-group form-check">
+                    <input placeholder="Cordena Y..." type="text" class="form-control" id="y" readonly="">
                 </div>
 
                 <button type="button" id="send-info-update" class="btn btn-warning">Actualizar</button>

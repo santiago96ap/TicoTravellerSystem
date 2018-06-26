@@ -1,5 +1,3 @@
-
-
 /*TABLAS*/
 
 create table tb_destinations(
@@ -389,7 +387,6 @@ BEGIN
 END $$
 DELIMITER ;
 
-
 DELIMITER $$
 CREATE PROCEDURE sp_recommend_destination(
     new_price VARCHAR(100),
@@ -467,9 +464,9 @@ BEGIN
     DELETE FROM TMPCategory;
     SET SQL_SAFE_UPDATES = 1;
     
-    SELECT tb_destinations.id, name, address, description, x, y, image, price, preference_place, destination_type, travel_time, road_type
+    SELECT distinct tb_destinations.id, name, address, description, x, y, image, price, preference_place, destination_type, travel_time, road_type
     FROM tb_value_destinations, tb_destinations 
-    WHERE tb_value_destinations.id = tb_destinations.id and tb_value_destinations.class=category_;
+    WHERE (tb_value_destinations.id_destination = tb_destinations.id and tb_value_destinations.class=category_);
 
     COMMIT;
 END $$
@@ -750,7 +747,7 @@ CREATE PROCEDURE sp_get_destination(
 BEGIN
     SELECT tb_destinations.id, name, address, description, x, y, image, price, preference_place, destination_type, travel_time, road_type,class
     FROM tb_value_destinations, tb_destinations 
-    where tb_value_destinations.id = tb_destinations.id AND id_destination=tb_destinations.id;
+    where tb_value_destinations.id_destination = tb_destinations.id AND id_destination=tb_destinations.id;
 END $$
 DELIMITER ;
 
@@ -777,7 +774,35 @@ BEGIN
 END $$
 DELIMITER ;
 
-/**********************************************INSERCIONES DE DATOS DE SITIOS TURISTICOS*****************************************/
+call sp_insert(
+'c','u','b','a','v','hotel',
+'Rancho San Rafael','Turrialba, Cartago','Paradero Turistico','9.903657','-83.670802','public/img/24.png'
+);
+
+insert into tb_destinations_values (id,attribute_name,repetition,discriminant)
+values (1,'price',0,0), (2,'preference_place',0,0), (3,'destination_type',0,0), 
+(4,'travel_time',0,0),(5,'road_type',0,0);
+
+insert into tb_user values('admin','admin')
+
+select * from tb_user
+
+select * from tb_destinations
+select * from tb_destinations_values
+select * from tb_destinations_differences
+select * from tb_destinations_probabilities
+select * from tb_destinations_prior_probabilities
+select * from tb_value_destinations
+
+        SET SQL_SAFE_UPDATES = 0;
+        delete from tb_destinations_values;
+delete from tb_destinations_differences;
+delete from tb_destinations_probabilities;
+delete from tb_destinations_prior_probabilities;
+delete from tb_value_destinations;
+delete from tb_destinations;
+        SET SQL_SAFE_UPDATES = 1;
+        
 
 call sp_insert('e','r','b','a','v','natural','Monumento nacional Guayabo','Santa Teresita Turrialba Cartago','El Monumento Nacional Guayabo es un area protegida de Costa Rica. En ella contiene uno de los sitios arqueologicos mas antiguos del pais.','9.971152','-83.690749','public/img/1.jpg');
 call sp_insert('i','u','y','c','p','natural','Monumento nacional Guayabo','Santa Teresita Turrialba Cartago','El Monumento Nacional Guayabo es un area protegida de Costa Rica. En ella contiene uno de los sitios arqueologicos mas antiguos del pais.','9.971152','-83.690749','public/img/1.jpg');
