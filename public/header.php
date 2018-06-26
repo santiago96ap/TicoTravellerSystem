@@ -46,7 +46,7 @@
         float: center;
         width: 60%;
         height: 30%;
-        padding-left: 20px;
+        margin-left: 60px;
       }
     </style>
     </head>

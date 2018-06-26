@@ -1,4 +1,6 @@
 
+var globalMap;
+
 $("#allSites").change(function () {
 
 	if ($("#allSites").val() !== "-1") {
@@ -25,10 +27,13 @@ $("#allSites").change(function () {
 
 	        	document.getElementById("imagen").src = data.image;
 
-	        	var map = new google.maps.Map(document.getElementById('map'), {
-			        zoom: 8,
-			        center: {lat: -34.397, lng: 150.644}
-			    });
+	        	var myLatLng = {lat: data.x, lng: data.y};
+
+	        	var marker = new google.maps.Marker({
+	                map: globalMap,
+	                position: myLatLng
+	            });
+	            markers.push(marker);
 
 	        } else {
 	        	alert("Error al cargar los datos");
@@ -42,4 +47,5 @@ function initMap() {
         zoom: 8,
         center: {lat: -34.397, lng: 150.644}
     });
+    globalMap = map;
 }
