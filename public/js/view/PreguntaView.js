@@ -41,26 +41,6 @@
     }//cambiarOpcion
 
 
-$("#send-info").click(function () {
-
-    alert($("#ps1").val());
-
-        var parameters = {
-            "typeDestination" : $("#ps1").val(),
-            "price" : $("#ps2").val(),
-            "preferencePlace" : $("#ps3").val(),
-            "time":  $("#ps4").val(),
-            "roadType":  $("#ps5").val()
-        };
-
-        $.post("?controller=Site&action=getSimilarity", parameters, function (data) {
-
-            alert(data);
-
-            for (var i = 0; i < data.length; i++) {
-                alert(data[i].name);
-            }
-        }, "json");
 
 });
 
