@@ -77,18 +77,17 @@ class SiteController {
      * turisticos alojados en la base de datos
      */
     function getCategorySites($price, $preferencePlace, $destinationType, $time, $road) {
-        //echo $price.$preferencePlace.$destinationType.$time.$road;
         require 'model/SiteModel.php';
         $model = new SiteModel();
         $result = $model->getCategorySites($price, $preferencePlace, $destinationType, $time, $road);      
-        echo json_encode($result);
+        return $result;
     }
 
     function getAllSites() {
         require 'model/SiteModel.php';
         $model = new SiteModel();
         $result = $model->getAllSites();      
-        echo json_encode($result);
+        return $result;
     }
 
     /*El siguiente método es el encargado de realizar el cálculo según el algoritmo de Euclides.
@@ -118,7 +117,7 @@ class SiteController {
      * ingresadas por el usuario, para despues retornarlos y enviarlos a la aplicacion movil
      */
     public function getSimilarity() {
-        //if(isset($_REQUEST['price']) && isset($_REQUEST['typeDestination']) && isset($_REQUEST['roadType']) && isset($_REQUEST['time']) && isset($_REQUEST['preferencePlace'])){       
+        if(isset($_REQUEST['price']) && isset($_REQUEST['typeDestination']) && isset($_REQUEST['roadType']) && isset($_REQUEST['time']) && isset($_REQUEST['preferencePlace'])){       
             
             $userData = array('e', 'b', 'p', 'b', 'r');
             //$sites = $this->getAllSites('e', 'r', 'b', 'b', 'p');
@@ -152,7 +151,7 @@ class SiteController {
             }
 
             echo json_encode($json);
-       // }//if
+       }//if
     }//getAllSites
     
     /*
