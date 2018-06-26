@@ -1,4 +1,5 @@
-
+var globalMap;
+var marker;
 
 $("#allSites").change(function () {
 
@@ -15,14 +16,28 @@ $("#allSites").change(function () {
 	        	document.getElementById("direccion").value = data.address;
 	        	document.getElementById("descripcion").value = data.description;
 	        	document.getElementById("x").value = data.x;
-	        	document.getElementById("x").value = data.y;
+	        	document.getElementById("y").value = data.y;
 
 	        	document.getElementById("tipoPrecio").value = data.price;
 	        	document.getElementById("lugarPreferencia").value = data.preference_place;
 	        	document.getElementById("tipoDestino").value = data.destination_type;
-	        	document.getElementById("tipoCamino").value = data.travel_time;
-	        	document.getElementById("tiempo").value = data.road_type;
+	        	document.getElementById("tipoCamino").value = data.road_type;
+	        	document.getElementById("tiempo").value = data.travel_time;
 	        	document.getElementById("categoria").value = data.class;
+
+	        	document.getElementById("imagen").src = data.image;
+
+	        	marker.setMap(null);
+
+	        	var myLatLng = {lat: parseFloat(data.x), lng: parseFloat(data.y)};
+
+	        	globalMap.setCenter(myLatLng);
+
+	        	marker = new google.maps.Marker({
+	                map: globalMap,
+	                position: myLatLng
+	            });
+	            markers.push(marker);
 
 	        } else {
 	        	alert("Error al cargar los datos");
@@ -95,4 +110,43 @@ $("#send-info-update").click(function () {
             }
         }
     });
+});
+
+function initMap() {
+    var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 12,
+        center: {lat: -34.397, lng: 150.644}
+    });
+    globalMap = map;
+    var myLatLng = {lat: -34.397, lng: 150.644};
+    marker = new google.maps.Marker({
+        map: globalMap,
+        position: myLatLng
+    });
+    markers.push(marker);
+}
+
+$("#send-info-buscar").click(function () {
+
+    var address = '';
+    address = document.getElementById('ubicacion').value;
+    var geocoder = new google.maps.Geocoder();
+
+    geocoder.geocode({'address': address}, function (results, status) {
+        if (status === 'OK') {
+            globalMap.setCenter(results[0].geometry.location);
+
+            var marker = new google.maps.Marker({
+                map: globalMap,
+                position: results[0].geometry.location
+            });
+            markers.push(marker);
+
+            document.getElementById("x").value = results[0].geometry.location.lat();
+            document.getElementById("y").value = results[0].geometry.location.lng();
+        } else {
+            alert("Error al buscar la ubicacion");
+        }
+    });
+
 });

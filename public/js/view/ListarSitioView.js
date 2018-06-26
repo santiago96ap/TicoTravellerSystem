@@ -19,8 +19,8 @@ $("#allSites").change(function () {
 	        	document.getElementById("tipoPrecio").value = data.price;
 	        	document.getElementById("lugarPreferencia").value = data.preference_place;
 	        	document.getElementById("tipoDestino").value = data.destination_type;
-	        	document.getElementById("tipoCamino").value = data.travel_time;
-	        	document.getElementById("tiempo").value = data.road_type;
+	        	document.getElementById("tipoCamino").value = data.road_type;
+	        	document.getElementById("tiempo").value = data.travel_time;
 	        	document.getElementById("categoria").value = data.class;
 
 	        	document.getElementById("imagen").src = data.image;

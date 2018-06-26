@@ -123,15 +123,31 @@ include_once 'public/header.php';
                 <div class="form-group form-check">
                     <input placeholder="Cordena Y..." type="text" class="form-control" id="y" readonly="">
                 </div>
+            </form>
+        </div>
+    </div>
+</section>
 
-                <button type="button" id="send-info-update" class="btn btn-warning">Actualizar</button>
-                <button type="button" id="send-info-delete" class="btn btn-danger">Eliminar</button>
+<div id="map"></div>
+
+<section>
+    <div class="container">
+
+        <div class="col-8">
+            <form>
+                <div class="form-group">
+                     <button type="button" id="send-info-update" class="btn btn-warning">Actualizar</button>
+                    <button type="button" id="send-info-delete" class="btn btn-danger">Eliminar</button>
+                </div>
             </form>
         </div>
     </div>
 </section>
 
  <script src="public/js/jquery-3.2.1.min.js" type="text/javascript"></script>
+  <script async defer
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC1JuYmoq83Om5mLz0qyg_k1viClteC2NU&callback=initMap"></script>
+</script>
 <script src="public/js/view/ActModSitioView.js" type="text/javascript"></script> 
 
 <?php

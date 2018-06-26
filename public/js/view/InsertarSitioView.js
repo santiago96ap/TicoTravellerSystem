@@ -1,9 +1,4 @@
-var activateUpdate = false;
-var activeInsert = false;
-var indexAtributtes = 0;
-var duration = 0;
-var markers = [];
-var originLatitude, originLongitude, destinyLatitude, destinyLongitude;
+
 var globalMap;
 
 $("#send-info").click(function () {
