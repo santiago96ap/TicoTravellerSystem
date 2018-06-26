@@ -44,22 +44,22 @@
     function enviarDatosRecomendacion(){
 
         alert(
-            " \n preferencePlace: "+ $("#ps1").val() +
-            " \n destinationType: "+  $("#ps2").val()
+            " \n typeDestination: "+ $("#ps1").val() +
+            " \n preferencePlace: "+  $("#ps2").val()
             + " \n price:" + $("#ps3").val() 
             + " \n time:" + $("#ps4").val() 
-            +  " \n road:" + $("#ps5").val());
+            +  " \n roadType:" + $("#ps5").val());
 
         var parametros = {
-            "preferencePlace" : $("#ps1").val(),
-            "destinationType" : $("#ps2").val(),
-            "price" : $("#ps3").val(),
+            "typeDestination" : $("#ps1").val(),
+            "price" : $("#ps2").val(),
+            "preferencePlace" : $("#ps3").val(),
             "time":  $("#ps4").val(),
-            "road":  $("#ps5").val()
+            "roadType":  $("#ps5").val()
         };
         $.ajax({
                 data:  parametros,
-                url:   '?controller=Site&action=getCategorySites',
+                url:   '?controller=Site&action=getSimilarity',
                 type:  'post',
                 beforeSend: function () {},
                 success:  function (response) {
