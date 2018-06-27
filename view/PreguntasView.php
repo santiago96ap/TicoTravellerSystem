@@ -289,7 +289,7 @@ include_once 'public/header.php';
         <h3 class="tittle_w3ls">Te hemos recomendado los siguientes sitios</h3>
         <div id="sitio1" class="row inner-sec-w3layouts-agileinfo">
             <h4>Sitio 1</h4>
-            <div class="contact-map">
+            <div id="map1" class="contact-map">
 
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15721.342388382782!2d-83.69054317925048!3d9.905981986649515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0d69b084d750d%3A0x7cb6a6e23ed66ac9!2sProvincia+de+Cartago%2C+Turrialba!5e0!3m2!1ses!2scr!4v1524682739191"
                         class="map" style="border:0" allowfullscreen=""></iframe>
@@ -301,7 +301,7 @@ include_once 'public/header.php';
         
         <div id="sitio2" class="row inner-sec-w3layouts-agileinfo">
             <h4>Sitio 2</h4>
-            <div class="contact-map">
+            <div id="map2" class="contact-map">
 
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15721.342388382782!2d-83.69054317925048!3d9.905981986649515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0d69b084d750d%3A0x7cb6a6e23ed66ac9!2sProvincia+de+Cartago%2C+Turrialba!5e0!3m2!1ses!2scr!4v1524682739191"
                         class="map" style="border:0" allowfullscreen=""></iframe>
@@ -313,7 +313,7 @@ include_once 'public/header.php';
         
         <div id="sitio3" class="row inner-sec-w3layouts-agileinfo">
             <h4>Sitio 3</h4>
-            <div class="contact-map">
+            <div id="map3" class="contact-map">
 
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15721.342388382782!2d-83.69054317925048!3d9.905981986649515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0d69b084d750d%3A0x7cb6a6e23ed66ac9!2sProvincia+de+Cartago%2C+Turrialba!5e0!3m2!1ses!2scr!4v1524682739191"
                         class="map" style="border:0" allowfullscreen=""></iframe>
@@ -349,7 +349,7 @@ include_once 'public/header.php';
             <div class="col-md-4 proj_gallery_grid" data-aos="zoom-in"></div>
             <div class="col-md-4 proj_gallery_grid" data-aos="zoom-in">
                 <div class="section_1_gallery_grid">
-                    <a title="Rural" href="public/images/p4Tiempo.png">
+                    <a  id="aimgSitio1" title="Rural" href="public/images/logo.png">
                         <div class="section_1_gallery_grid1">
                             <img id="imgSitio1" src="public/images/p4Tiempo.png" alt=" " class="img-responsive" />
                         </div>
@@ -389,7 +389,7 @@ include_once 'public/header.php';
             <div class="col-md-4 proj_gallery_grid" data-aos="zoom-in"></div>
             <div class="col-md-4 proj_gallery_grid" data-aos="zoom-in">
                 <div class="section_1_gallery_grid">
-                    <a title="Rural" href="public/images/p4Tiempo.png">
+                    <a  id="aimgSitio2" title="Rural" href="public/images/logo.png">
                         <div class="section_1_gallery_grid1">
                             <img id="imgSitio2"  src="public/images/p4Tiempo.png" alt=" " class="img-responsive" />
                         </div>
@@ -429,7 +429,7 @@ include_once 'public/header.php';
             <div class="col-md-4 proj_gallery_grid" data-aos="zoom-in"></div>
             <div class="col-md-4 proj_gallery_grid" data-aos="zoom-in">
                 <div class="section_1_gallery_grid">
-                    <a title="Rural" href="public/images/p4Tiempo.png">
+                    <a id="aimgSitio3" title="Rural" href="public/images/logo.png">
                         <div class="section_1_gallery_grid1">
                             <img id="imgSitio3" src="public/images/p4Tiempo.png" alt=" " class="img-responsive" />
                         </div>
@@ -446,7 +446,8 @@ include_once 'public/header.php';
     </div>
   </div>
 </div>
-
+<script async defer
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC1JuYmoq83Om5mLz0qyg_k1viClteC2NU&callback=initMap"></script>
 <script src="public/js/jquery-3.2.1.min.js" type="text/javascript"></script>
 <script src="public/js/view/PreguntaView.js" type="text/javascript"></script> 
 

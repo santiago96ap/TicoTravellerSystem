@@ -93,7 +93,7 @@ include_once 'public/header.php';
 
 <div id="map"></div>
 
- <script src="public/js/jquery-3.2.1.min.js" type="text/javascript"></script>
+<script src="public/js/jquery-3.2.1.min.js" type="text/javascript"></script>
 <script async defer
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC1JuYmoq83Om5mLz0qyg_k1viClteC2NU&callback=initMap"></script>
 </script>
