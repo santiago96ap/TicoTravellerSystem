@@ -10,6 +10,7 @@ function cambiarOpcion(opcion) {
                 $('#p3').hide(); //oculto mediante id
                 $('#p4').hide(); //oculto mediante id                
                 $('#p5').hide(); //oculto mediante id
+                $('#resultado').hide();
                 break;
             case "2":
                 $('#p2').show(); //muestro mediante id
@@ -17,6 +18,7 @@ function cambiarOpcion(opcion) {
                 $('#p3').hide(); //oculto mediante id
                 $('#p4').hide(); //oculto mediante id                
                 $('#p5').hide(); //oculto mediante id
+                $('#resultado').hide();
                 break;
             case "3":
                 $('#p3').show(); //muestro mediante id
@@ -24,6 +26,7 @@ function cambiarOpcion(opcion) {
                 $('#p1').hide(); //oculto mediante id
                 $('#p4').hide(); //oculto mediante id                
                 $('#p5').hide(); //oculto mediante id
+                $('#resultado').hide();
                 break;
             case "4":
                 $('#p4').show(); //muestro mediante id
@@ -31,6 +34,7 @@ function cambiarOpcion(opcion) {
                 $('#p3').hide(); //oculto mediante id
                 $('#p1').hide(); //oculto mediante id                
                 $('#p5').hide(); //oculto mediante id
+                $('#resultado').hide();
                 break;
             case "5":
                 $('#p5').show(); //muestro mediante id
@@ -38,6 +42,7 @@ function cambiarOpcion(opcion) {
                 $('#p3').hide(); //oculto mediante id
                 $('#p4').hide(); //oculto mediante id                
                 $('#p1').hide(); //oculto mediante id
+                $('#resultado').hide();
                 break;
             default:
                 break;
@@ -54,7 +59,7 @@ function clean(){
 }
 
 function initMap(){
-        var map = new google.maps.Map(document.getElementById('map1'), {
+    var map = new google.maps.Map(document.getElementById('map1'), {
         zoom: 12,
         center: {lat: -34.397, lng: 150.644}
     });
@@ -63,7 +68,7 @@ function initMap(){
 }
 
 $("#send-info").click(function () {
-    
+     
     var parameters = {
         "typeDestination" : $("#ps3").val(),
         "price" : $("#ps2").val(),
@@ -86,7 +91,7 @@ $("#send-info").click(function () {
         }//for
     }, 
     "json");
-
+    $('#resultado').show(); //muestro mediante id
 });
 
 

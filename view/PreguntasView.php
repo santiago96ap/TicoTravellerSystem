@@ -284,7 +284,7 @@ include_once 'public/header.php';
 </div> 
 
 <!--Recomendación-->
-<section id="resultado" class="services" >
+<section id="resultado" class="services"  style="display: none;">
     <div class="container">
         <h3 class="tittle_w3ls">Te hemos recomendado los siguientes sitios</h3>
         <div id="sitio1" class="row inner-sec-w3layouts-agileinfo">
@@ -338,7 +338,7 @@ include_once 'public/header.php';
         </button>
       </div>
       <div class="modal-body">
-        <h2 class="font-weight-bold text-center" id="tituloSitio1">Titulo sitio 2</h2>
+        <h2 class="font-weight-bold text-center" id="tituloSitio1">Titulo sitio </h2>
         <h6 class="font-italic text-center" id="direccionSitio1">Dirección</h6>
         <p id="descSitio1" class="font-weight-light text-justify">Descripción sitio 2</p>
         <center>
