@@ -73,27 +73,6 @@ include_once 'public/header.php';
 </section>
 <!--//model-->
 
-<section class="services">
-    <div class="container">
-
-        <div class="contact_grid_right">
-            <h6>´Sugerencias</h6>
-            <form action="#" method="post">
-                <div class="contact_left_grid">
-                    <input type="text" name="Name" placeholder="Nombre" required="">
-                    <input type="email" name="Email" placeholder="Correo electrónico" required="">
-                    <input type="text" name="Subject" placeholder="Asunto" required="">
-                    <textarea name="Message" onfocus="this.value = '';" onblur="if (this.value == '') {
-                                this.value = 'Mensaje...';
-                            }" required="">Mensaje...</textarea>
-                    <input type="submit" value="Enviar">
-                    <input type="reset" value="Limpiar">
-                    <div class="clearfix"> </div>
-                </div>
-            </form>
-        </div>
-    </div>
-</section>
 <?php
 include_once 'public/footer.php';
 ?>	

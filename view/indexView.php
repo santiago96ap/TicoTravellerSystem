@@ -14,17 +14,19 @@ include_once 'public/header.php';
 				<div class="carousel-item active">
 					<div class="carousel-caption">
 						<h3>¡Bienvenido a Tico Trevaller!</h3>
-
+						<a href="?controller=Index&action=preguntas" class="btn btn-outline-success ">Iniciar</a>
 					</div>
 				</div>
 				<div class="carousel-item item2">
 					<div class="carousel-caption">
 						<h3>Te recomendamos sitios turístico</h3>
+						<a href="?controller=Index&action=preguntas"  class="btn btn-outline-info ">Iniciar</a>
 					</div>
 				</div>
 				<div class="carousel-item item3">
 					<div class="carousel-caption">
 						<h3>¡Visitanos!</h3>
+						<a href="?controller=Index&action=preguntas"  class="btn btn-outline-warning ">Iniciar</a>
 					</div>
 				</div>
 			</div>
