@@ -1,6 +1,4 @@
 
-var globalMap;
-
 
 function cambiarOpcion(opcion) {
         switch (opcion) {
@@ -58,14 +56,7 @@ function clean(){
     }
 }
 
-function initMap(){
-    var map = new google.maps.Map(document.getElementById('map1'), {
-        zoom: 12,
-        center: {lat: -34.397, lng: 150.644}
-    });
-    globalMap = map;
 
-}
 
 $("#send-info").click(function () {
      

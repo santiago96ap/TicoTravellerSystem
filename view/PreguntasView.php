@@ -340,11 +340,15 @@ include_once 'public/header.php';
             <div class="col-md-4 proj_gallery_grid" data-aos="zoom-in">
                 <div class="section_1_gallery_grid">
                     <a  id="aimgSitio1" title="Rural" href="" rel="external">
+
                         <div class="section_1_gallery_grid1">
                             <img id="imgSitio1" src="public/images/p4Tiempo.png" alt=" " class="img-responsive" />
+
                         </div>
                     </a>
+                    
                 </div>
+
             </div>
             <div class="col-md-4 proj_gallery_grid" data-aos="zoom-in"></div>
         </div>
