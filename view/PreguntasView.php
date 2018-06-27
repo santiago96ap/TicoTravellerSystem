@@ -332,14 +332,14 @@ include_once 'public/header.php';
         <h6 class="font-italic text-center" id="direccionSitio1">Dirección</h6>
         <p id="descSitio1" class="font-weight-light text-justify">Descripción sitio 2</p>
         <center>
-            <button id="videoSitio1" type="button" class="btn btn-outline-info ">Video</button>
+            <a id="videoSitio1"  href="https://www.youtube.com/watch?v=Kn6qgfTmsyA"  target="_blank" class="btn btn-outline-info ">Video</a>
         </center>
         
             <div class="row inner-sec-w3layouts-agileinfo">
             <div class="col-md-4 proj_gallery_grid" data-aos="zoom-in"></div>
             <div class="col-md-4 proj_gallery_grid" data-aos="zoom-in">
                 <div class="section_1_gallery_grid">
-                    <a  id="aimgSitio1" title="Rural" href="public/images/logo.png">
+                    <a  id="aimgSitio1" title="Rural" href="" rel="external">
                         <div class="section_1_gallery_grid1">
                             <img id="imgSitio1" src="public/images/p4Tiempo.png" alt=" " class="img-responsive" />
                         </div>
@@ -351,7 +351,7 @@ include_once 'public/header.php';
         
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
       </div>
     </div>
   </div>
@@ -372,14 +372,14 @@ include_once 'public/header.php';
         <h6 class="font-italic text-center" id="direccionSitio2">Dirección</h6>
         <p id="descSitio2" class="font-weight-light text-justify">Descripción sitio 2</p>
         <center>
-            <button id="videoSitio2" type="button" class="btn btn-outline-info ">Video</button>
+            <a id="videoSitio1"   href="https://www.youtube.com/watch?v=Kn6qgfTmsyA" target="_blank" class="btn btn-outline-info ">Video</a>
         </center>
         
             <div class="row inner-sec-w3layouts-agileinfo">
             <div class="col-md-4 proj_gallery_grid" data-aos="zoom-in"></div>
             <div class="col-md-4 proj_gallery_grid" data-aos="zoom-in">
                 <div class="section_1_gallery_grid">
-                    <a  id="aimgSitio2" title="Rural" href="public/images/logo.png">
+                    <a  id="aimgSitio2" title="Rural" href="" rel="external">
                         <div class="section_1_gallery_grid1">
                             <img id="imgSitio2"  src="public/images/p4Tiempo.png" alt=" " class="img-responsive" />
                         </div>
@@ -391,14 +391,14 @@ include_once 'public/header.php';
         
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
       </div>
     </div>
   </div>
 </div>
 
 <!-- Modal Sitio 3 -->
-<div class="modal fade" id="modalSite3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+<div class="modal fade" id="modalSite3" tabindex="-1" role="dialog"  aria-labelledby="exampleModalLongTitle" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -412,14 +412,14 @@ include_once 'public/header.php';
         <h6 class="font-italic text-center" id="direccionSitio3">Dirección</h6>
         <p id="descSitio3" class="font-weight-light text-justify">Descripción sitio 3</p>
         <center>
-            <button id="videoSitio3" type="button" class="btn btn-outline-info ">Video</button>
+            <a id="videoSitio1" href="https://www.youtube.com/watch?v=Kn6qgfTmsyA" target="_blank" class="btn btn-outline-info ">Video</a>
         </center>
         
             <div class="row inner-sec-w3layouts-agileinfo">
             <div class="col-md-4 proj_gallery_grid" data-aos="zoom-in"></div>
             <div class="col-md-4 proj_gallery_grid" data-aos="zoom-in">
                 <div class="section_1_gallery_grid">
-                    <a id="aimgSitio3" title="Rural" href="public/images/logo.png">
+                    <a id="aimgSitio3" title="Rural" href="">
                         <div class="section_1_gallery_grid1">
                             <img id="imgSitio3" src="public/images/p4Tiempo.png" alt=" " class="img-responsive" />
                         </div>
@@ -436,8 +436,6 @@ include_once 'public/header.php';
     </div>
   </div>
 </div>
-<script async defer
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC1JuYmoq83Om5mLz0qyg_k1viClteC2NU&callback=initMap"></script>
 <script src="public/js/jquery-3.2.1.min.js" type="text/javascript"></script>
 <script src="public/js/view/PreguntaView.js" type="text/javascript"></script> 
 

@@ -86,7 +86,7 @@ $("#send-info").click(function () {
             $("#direccionSitio" + cont).append(data[i].address);
             $("#descSitio" + cont).append(data[i].description);
             $("#imgSitio" + cont).attr("src",data[i].image);
-            document.getElementById("aimgSitio" + cont).href= data[i].image;
+            $("#aimgSitio1").attr("href",data[i].image);
             cont ++;
         }//for
     }, 
