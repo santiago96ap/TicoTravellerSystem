@@ -1,5 +1,6 @@
 
 var globalMap;
+var marker;
 
 $("#send-info").click(function () {
 
@@ -48,14 +49,18 @@ $("#send-info-buscar").click(function () {
         if (status === 'OK') {
             globalMap.setCenter(results[0].geometry.location);
 
-            var marker = new google.maps.Marker({
+            
+            document.getElementById("x").value = results[0].geometry.location.lat();
+            document.getElementById("y").value = results[0].geometry.location.lng();
+
+            marker.setMap(null);
+
+            marker = new google.maps.Marker({
                 map: globalMap,
                 position: results[0].geometry.location
             });
             markers.push(marker);
 
-            document.getElementById("x").value = results[0].geometry.location.lat();
-            document.getElementById("y").value = results[0].geometry.location.lng();
         } else {
             alert("Error al buscar la ubicacion");
         }
@@ -69,4 +74,11 @@ function initMap() {
         center: {lat: -34.397, lng: 150.644}
     });
     globalMap = map;
+
+    var myLatLng = {lat: -34.397, lng: 150.644};
+    marker = new google.maps.Marker({
+        map: globalMap,
+        position: myLatLng
+    });
+    markers.push(marker);
 }

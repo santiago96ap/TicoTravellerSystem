@@ -17,7 +17,6 @@ class AdminController {
         $type = $file["type"];
         $UrlTemp = $file["tmp_name"];
         $folder = "public/img/";
-        $path="";
         
         if ($type != 'image/jpg' && $type != 'image/jpeg' && $type != 'image/png' && $type != 'image/gif') {
             throw new Exception('');
@@ -25,7 +24,6 @@ class AdminController {
             $totalFiles = count(glob($folder . '{*.jpg,*.gif,*.png,*.jpeg}', GLOB_BRACE));
             $typeTemp = explode('/', $type);
             $src = $folder.$totalFiles.'.'.$typeTemp[1];
-            $path=$totalFiles.'.'.$typeTemp[1];
             move_uploaded_file($UrlTemp, $src);
         }
         
@@ -41,7 +39,7 @@ class AdminController {
             $_POST['tiempo'],
             $_POST['tipoCamino'],
             $_POST['categoria'],
-            $path
+            $src
         );      
         echo json_encode($result);
     }
@@ -76,7 +74,6 @@ class AdminController {
         $type = $file["type"];
         $UrlTemp = $file["tmp_name"];
         $folder = "public/img/";
-        $path="";
         
         if ($type != 'image/jpg' && $type != 'image/jpeg' && $type != 'image/png' && $type != 'image/gif') {
             throw new Exception('');
@@ -84,7 +81,6 @@ class AdminController {
             $totalFiles = count(glob($folder . '{*.jpg,*.gif,*.png,*.jpeg}', GLOB_BRACE));
             $typeTemp = explode('/', $type);
             $src = $folder.$totalFiles.'.'.$typeTemp[1];
-            $path=$totalFiles.'.'.$typeTemp[1];
             move_uploaded_file($UrlTemp, $src);
         }
         
@@ -100,7 +96,7 @@ class AdminController {
             $_POST['tiempo'],
             $_POST['tipoCamino'],
             $_POST['categoria'],
-            $path,
+            $src,
             $_POST['id']
         );      
         echo json_encode($result);

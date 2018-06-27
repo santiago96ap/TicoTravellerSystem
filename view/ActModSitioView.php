@@ -7,7 +7,7 @@ include_once 'public/header.php';
     <li class="breadcrumb-item">
         <a href="?controller=Index&action=indexADM">Inicio</a>
     </li>
-    <li class="breadcrumb-item active">Registar Sitio</li>
+    <li class="breadcrumb-item active">Actualizar o eleminar Sitios tur&iacute;sticos</li>
 </ol>
 <section>
     <div class="container">
