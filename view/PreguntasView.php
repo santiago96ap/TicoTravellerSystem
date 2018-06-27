@@ -145,6 +145,9 @@ include_once 'public/header.php';
 
             </div>
             <div class="col-md-4 proj_gallery_grid" data-aos="zoom-in">
+             
+            </div>
+            <div class="col-md-4 proj_gallery_grid" data-aos="zoom-in">
                 <div class="section_1_gallery_grid">
                     <a title="Rural" href="public/images/p3Bosque.png">
                         <div class="section_1_gallery_grid1">
@@ -152,19 +155,6 @@ include_once 'public/header.php';
                             <div class="proj_gallery_grid1_pos">
                                 <h3>Tipo de destipo</h3>
                                 <p>Montaña</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-4 proj_gallery_grid" data-aos="zoom-in">
-                <div class="section_1_gallery_grid">
-                    <a title="Rural" href="public/images/p3Pool.jpg">
-                        <div class="section_1_gallery_grid1">
-                            <img src="public/images/p3Pool.jpg" alt=" " class="img-responsive" />
-                            <div class="proj_gallery_grid1_pos">
-                                <h3>Tipo de destipo</h3>
-                                <p>Centro turístico</p>
                             </div>
                         </div>
                     </a>
