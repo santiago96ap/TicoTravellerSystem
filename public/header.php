@@ -22,8 +22,11 @@
             }
         </script>
         <script src="public/js/jquery-3.2.1.min.js"></script>
+<<<<<<< HEAD
         <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+=======
+>>>>>>> b9976393b4c01cb4cd174841cbfc20678b008e9c
         <link href="public/css/bootstrap.css" rel='stylesheet' type='text/css' />
         <link rel="stylesheet" href="public/css/flexslider.css" type="text/css" media="screen" property="" />
         <link href="public/css/style.css" rel='stylesheet' type='text/css' />
@@ -71,6 +74,9 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="?controller=Index&action=preguntas">Recomendación</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="?controller=Index&action=buscar">Buscar</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="?controller=Index&action=contactenos">Contáctenos
