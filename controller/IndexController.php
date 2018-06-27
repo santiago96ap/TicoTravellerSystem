@@ -50,4 +50,8 @@ class IndexController {
      public function listarSitio(){
         $this->view->show("ListarSitioView.php");
     }//actModSitio
+
+    public function buscar(){
+        $this->view->show("searchSite.php");
+    }//actModSitio
 }

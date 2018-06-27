@@ -151,9 +151,9 @@ class SiteController {
     /*****************************APLICACIÓN WEB***************************/
 
     public function searchSite() {
-        //if(isset($_REQUEST['name'])){       
-            //$siteName = array($_REQUEST['name']);
-            $siteName = array('parque nacional');
+        if(isset($_REQUEST['name'])){       
+            $siteName = array($_REQUEST['name']);
+            //$siteName = array('parque nacional');
             $first = true;
             $numAnterior; $arrayTemp; $finalSite;
             $registros = $this->getAllSites();
@@ -175,7 +175,7 @@ class SiteController {
             }//foreach
             
             echo json_encode($finalSite);
-       // }//if
+        }//if
     }//searchSite
 
 
