@@ -49,6 +49,29 @@
                 margin-left: 100px;
                 margin-bottom: 10px;
               }
+                        #map1 {
+                height: 20%;
+                float: center;
+                width: 60%;
+                height: 50%;
+                margin-left: 100px;
+                margin-bottom: 10px;
+              }
+                        #map2 {
+                height: 20%;
+                float: center;
+                width: 60%;
+                height: 50%;
+                margin-left: 100px;
+                margin-bottom: 10px;
+              }          #map3 {
+                height: 20%;
+                float: center;
+                width: 60%;
+                height: 50%;
+                margin-left: 100px;
+                margin-bottom: 10px;
+              }
               .images-container {
                   width: 90%;
                   text-align: center;
