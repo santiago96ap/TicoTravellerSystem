@@ -18,6 +18,8 @@ function cambiarOpcion(opcion) {
                 $('#map1').hide();
                 $('#map2').hide();
                 $('#map3').hide();
+                $('#title').hide();
+
                 break;
             case "2":
                 $('#p2').show(); //muestro mediante id
@@ -31,6 +33,7 @@ function cambiarOpcion(opcion) {
                 $('#map1').hide();
                 $('#map2').hide();
                 $('#map3').hide();
+                $('#title').hide();
                 break;
             case "3":
                 $('#p3').show(); //muestro mediante id
@@ -44,6 +47,7 @@ function cambiarOpcion(opcion) {
                 $('#map1').hide();
                 $('#map2').hide();
                 $('#map3').hide();
+                $('#title').hide();
                 break;
             case "4":
                 $('#p4').show(); //muestro mediante id
@@ -57,6 +61,7 @@ function cambiarOpcion(opcion) {
                 $('#map1').hide();
                 $('#map2').hide();
                 $('#map3').hide();
+                $('#title').hide();
                 break;
             case "5":
                 $('#p5').show(); //muestro mediante id
@@ -70,6 +75,7 @@ function cambiarOpcion(opcion) {
                 $('#map1').hide();
                 $('#map2').hide();
                 $('#map3').hide();
+                $('#title').hide();
                 break;
             default:
                 break;
@@ -151,15 +157,23 @@ $("#send-info").click(function () {
     $('#map1').show(); //muestro mediante id
     $('#map2').show(); //muestro mediante id
     $('#map3').show(); //muestro mediante id
+    $('#title').show(); //muestro mediante id
 });
 
 
 function initMap() {
+    var myLatLng = {lat: -34.397, lng: 150.644};
     var map1 = new google.maps.Map(document.getElementById('map1'), {
         zoom: 12,
         center: {lat: -34.397, lng: 150.644}
     });
     globalMap1 = map1;
+
+    var marker1 = new google.maps.Marker({
+        map: globalMap1,
+        position: myLatLng
+    });
+    markers.push(marker1);
 
      var map2 = new google.maps.Map(document.getElementById('map2'), {
         zoom: 12,
@@ -167,12 +181,25 @@ function initMap() {
     });
     globalMap2 = map2;
 
+    var marker2 = new google.maps.Marker({
+        map: globalMap2,
+        position: myLatLng
+    });
+    markers.push(marker2);
+
 
      var map3 = new google.maps.Map(document.getElementById('map3'), {
         zoom: 12,
         center: {lat: -34.397, lng: 150.644}
     });
     globalMap3 = map3;
+
+
+    var marker3 = new google.maps.Marker({
+        map: globalMap3,
+        position: myLatLng
+    });
+    markers.push(marker3);
 }//initMap
 
 

@@ -317,15 +317,17 @@ include_once 'public/header.php';
     </div>
 </section>
 -->
-
+<h3 id="title" class="tittle_w3ls" style="display: none;">Te hemos recomendado los siguientes sitios</h3>
 <!-- Sitio 1 -->
 
+<div class="container">
+<h4 class="tittle_w3ls" id="nombreSitio1"></h4>
+</div>
 <div id="map1" style="display: none;"></div>
 
 <section class="services" id="result1" style="display: none;">
     <div class="container">
-         <h3 class="tittle_w3ls">Te hemos recomendado los siguientes sitios</h3>
-        <h4 class="tittle_w3ls" id="nombreSitio1"></h4>
+
         <div class="row inner-sec-w3layouts-agileinfo">
             <button id="btnSite1" class="btn btn-info" data-toggle="modal" data-target="#modalSite1">Acerca de</button>
         </div>
@@ -333,12 +335,14 @@ include_once 'public/header.php';
 </section>
 
 <!-- Sitio 2 -->
-
+<div class="container">
+<h4 class="tittle_w3ls" id="nombreSitio2"></h4>
+</div>
 <div id="map2" style="display: none;"></div>
 
 <section class="services" id="result2" style="display: none;">
     <div class="container">
-        <h4 class="tittle_w3ls" id="nombreSitio2"></h4>
+        
         <div class="row inner-sec-w3layouts-agileinfo">
             <button id="btnSite2" class="btn btn-info" data-toggle="modal" data-target="#modalSite2">Acerca de</button>
         </div>
@@ -346,12 +350,15 @@ include_once 'public/header.php';
 </section>
 
 <!-- Sitio 3 -->
+<div class="container">
+    <h4 class="tittle_w3ls" id="nombreSitio3"></h4>
+</div>
 
 <div id="map3" style="display: none;"></div>
 
 <section class="services" id="result3" style="display: none;">
     <div class="container">
-        <h4 class="tittle_w3ls" id="nombreSitio3"></h4>
+        
         <div class="row inner-sec-w3layouts-agileinfo">
             <button id="btnSite3" class="btn btn-info" data-toggle="modal" data-target="#modalSite3">Acerca de</button>
         </div>
