@@ -274,6 +274,8 @@ include_once 'public/header.php';
 </div> 
 
 <!--Recomendación-->
+
+<!--
 <section id="resultado" class="services"  style="display: none;">
     <div class="container">
         <h3 class="tittle_w3ls">Te hemos recomendado los siguientes sitios</h3>
@@ -314,6 +316,48 @@ include_once 'public/header.php';
         </div>
     </div>
 </section>
+-->
+
+<!-- Sitio 1 -->
+
+<div id="map1" style="display: none;"></div>
+
+<section class="services" id="result1" style="display: none;">
+    <div class="container">
+         <h3 class="tittle_w3ls">Te hemos recomendado los siguientes sitios</h3>
+        <h4 class="tittle_w3ls" id="nombreSitio1"></h4>
+        <div class="row inner-sec-w3layouts-agileinfo">
+            <button id="btnSite1" class="btn btn-info" data-toggle="modal" data-target="#modalSite1">Acerca de</button>
+        </div>
+    </div>
+</section>
+
+<!-- Sitio 2 -->
+
+<div id="map2" style="display: none;"></div>
+
+<section class="services" id="result2" style="display: none;">
+    <div class="container">
+        <h4 class="tittle_w3ls" id="nombreSitio2"></h4>
+        <div class="row inner-sec-w3layouts-agileinfo">
+            <button id="btnSite2" class="btn btn-info" data-toggle="modal" data-target="#modalSite2">Acerca de</button>
+        </div>
+    </div>
+</section>
+
+<!-- Sitio 3 -->
+
+<div id="map3" style="display: none;"></div>
+
+<section class="services" id="result3" style="display: none;">
+    <div class="container">
+        <h4 class="tittle_w3ls" id="nombreSitio3"></h4>
+        <div class="row inner-sec-w3layouts-agileinfo">
+            <button id="btnSite3" class="btn btn-info" data-toggle="modal" data-target="#modalSite3">Acerca de</button>
+        </div>
+    </div>
+</section>
+
 
 
 
@@ -438,6 +482,8 @@ include_once 'public/header.php';
     </div>
   </div>
 </div>
+<script async defer
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC1JuYmoq83Om5mLz0qyg_k1viClteC2NU&callback=initMap"></script>
 <script src="public/js/jquery-3.2.1.min.js" type="text/javascript"></script>
 <script src="public/js/view/PreguntaView.js" type="text/javascript"></script> 
 

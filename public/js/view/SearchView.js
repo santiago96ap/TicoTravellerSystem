@@ -1,6 +1,6 @@
     var globalMap;
     var marker;
-     var arraySitios = [];
+    var arraySitios = [];
 
     function obtenerNombreSitios(){
         $.post("?controller=Site&action=allSitesName",null, function(data){
