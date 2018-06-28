@@ -36,19 +36,47 @@
         <link href="//fonts.googleapis.com/css?family=Poppins:100i,200,200i,300,400,400i,500,500i,600,600i,700,700i,800" rel="stylesheet">
 
         <style>
-      html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
-      #map {
-        height: 20%;
-        float: center;
-        width: 60%;
-        height: 50%;
-        margin-left: 100px;
-        margin-bottom: 10px;
-      }
+              html, body {
+                height: 100%;
+                margin: 0;
+                padding: 0;
+              }
+              #map {
+                height: 20%;
+                float: center;
+                width: 60%;
+                height: 50%;
+                margin-left: 100px;
+                margin-bottom: 10px;
+              }
+              .images-container {
+                  width: 90%;
+                  text-align: center;
+                  margin: 60px auto 60px;
+                }
+                .container-enlarge {
+                    display: inline-block;
+                    position: relative;
+                    z-index: 0;
+                    margin: 15px;
+                }
+                .container-enlarge > img {
+                    height: auto;
+                    max-width: 100%;
+                    width: 150px;
+                    border-radius: 5px;
+                }
+                .container-enlarge span {
+                    position: absolute;
+                    top: -9999em;
+                    left: -9999em;
+                }
+                .container-enlarge:hover span {
+                    top: -320px;
+                    left: -75px;
+                    width: 300px;
+                }
+
     </style>
     </head>
 

@@ -17,7 +17,7 @@ class IndexController {
         $this->view->show("DondeEncontrarView.php");
     }//dondeEncontrar
     public function sitioInteres(){
-        $this->view->show("SitioInteresView.php");
+        $this->view->show("searchSite.php");
     }//sitioInteres
     
     public function sobreNosotros(){

@@ -2,6 +2,10 @@
 include_once 'public/header.php';
 ?>
 
+<div class="link-container">
+  <a target="_blank" href="https://www.silocreativo.com/zoom-imagenes-css-hover/" class="more-link">Visit the original article</a>
+</div>
+
 <!--/banner-->
 	<div class="banner">
 		<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">

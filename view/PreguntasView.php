@@ -339,13 +339,13 @@ include_once 'public/header.php';
             <div class="col-md-4 proj_gallery_grid" data-aos="zoom-in"></div>
             <div class="col-md-4 proj_gallery_grid" data-aos="zoom-in">
                 <div class="section_1_gallery_grid">
-                    <a  id="aimgSitio1" title="Rural" href="" rel="external">
 
-                        <div class="section_1_gallery_grid1">
-                            <img id="imgSitio1" src="public/images/p4Tiempo.png" alt=" " class="img-responsive" />
 
-                        </div>
-                    </a>
+                  <div class="container-enlarge">
+                    <img  id="imgSitio1" src="public/images/logo.png">
+                    <span id="simgSitio1"><img src=""></span>
+                  </div>
+
                     
                 </div>
 
@@ -383,11 +383,10 @@ include_once 'public/header.php';
             <div class="col-md-4 proj_gallery_grid" data-aos="zoom-in"></div>
             <div class="col-md-4 proj_gallery_grid" data-aos="zoom-in">
                 <div class="section_1_gallery_grid">
-                    <a  id="aimgSitio2" title="Rural" href="" rel="external">
-                        <div class="section_1_gallery_grid1">
-                            <img id="imgSitio2"  src="public/images/p4Tiempo.png" alt=" " class="img-responsive" />
-                        </div>
-                    </a>
+                     <div class="container-enlarge">
+                        <img  id="imgSitio2" src="public/images/logo.png">
+                        <span id="simgSitio2"><img src="public/images/logo.png"></span>
+                      </div>
                 </div>
             </div>
             <div class="col-md-4 proj_gallery_grid" data-aos="zoom-in"></div>
@@ -423,11 +422,10 @@ include_once 'public/header.php';
             <div class="col-md-4 proj_gallery_grid" data-aos="zoom-in"></div>
             <div class="col-md-4 proj_gallery_grid" data-aos="zoom-in">
                 <div class="section_1_gallery_grid">
-                    <a id="aimgSitio3" title="Rural" href="">
-                        <div class="section_1_gallery_grid1">
-                            <img id="imgSitio3" src="public/images/p4Tiempo.png" alt=" " class="img-responsive" />
-                        </div>
-                    </a>
+                       <div class="container-enlarge">
+                        <img  id="imgSitio3" src="public/images/logo.png">
+                        <span id="simgSitio3"><img   src="public/images/logo.png"></span>
+                      </div>
                 </div>
             </div>
             <div class="col-md-4 proj_gallery_grid" data-aos="zoom-in"></div>

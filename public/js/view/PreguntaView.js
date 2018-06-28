@@ -53,6 +53,7 @@ function clean(){
         $("#direccionSitio" + i).empty();
         $("#descSitio" + i).empty();
         $("#imgSitio" + i).empty();
+        $("#simgSitio" + i).empty();
     }
 }
 
@@ -72,12 +73,12 @@ $("#send-info").click(function () {
         clean();
         var cont =1;
         for (var i = 0; i < data.length; i++) {
-            
+            $("#imgSitio" + cont).attr("src",data[i].image);
             $("#tituloSitio" + cont).append(data[i].name);
             $("#direccionSitio" + cont).append(data[i].address);
             $("#descSitio" + cont).append(data[i].description);
-            $("#imgSitio" + cont).attr("src",data[i].image);
-            $("#aimgSitio1").attr("href",data[i].image);
+            $("#simgSitio" + cont).append('<img src="'+data[i].image+'">');
+            
             cont ++;
         }//for
     }, 
