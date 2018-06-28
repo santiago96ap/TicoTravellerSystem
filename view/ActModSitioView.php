@@ -98,7 +98,7 @@ include_once 'public/header.php';
                 </div>
 
                 <div class="form-group">
-                    <img src="public/images/logo.png" id="imagen" height="100" width="100">
+                    <img src="public/images/logo.png" id="imagen" height="250" width="250">
                 </div>
 
                 <div class="form-group">

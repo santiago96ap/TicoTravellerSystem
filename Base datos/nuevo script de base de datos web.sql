@@ -810,6 +810,7 @@ call sp_insert('i','u','b','c','v','natural','Monumento nacional Guayabo','Santa
 call sp_insert('e','r','b','c','p','natural','Monumento nacional Guayabo','Santa Teresita Turrialba Cartago','El Monumento Nacional Guayabo es un area protegida de Costa Rica. En ella contiene uno de los sitios arqueologicos mas antiguos del pais.','9.971152','-83.690749','public/img/1.jpg');
 call sp_insert('c','r','y','c','v','natural','Monumento nacional Guayabo','Santa Teresita Turrialba Cartago','El Monumento Nacional Guayabo es un area protegida de Costa Rica. En ella contiene uno de los sitios arqueologicos mas antiguos del pais.','9.971152','-83.690749','public/img/1.jpg');
 call sp_insert('i','u','b','b','p','natural','Monumento nacional Guayabo','Santa Teresita Turrialba Cartago','El Monumento Nacional Guayabo es un area protegida de Costa Rica. En ella contiene uno de los sitios arqueologicos mas antiguos del pais.','9.971152','-83.690749','public/img/1.jpg');
+call sp_insert('i','u','y','c','v','natural','Monumento nacional Guayabo','Santa Teresita Turrialba Cartago','El Monumento Nacional Guayabo es un area protegida de Costa Rica. En ella contiene uno de los sitios arqueologicos mas antiguos del pais.','9.971152','-83.690749','public/img/1.jpg');
 
 call sp_insert('c','r','b','a','p','hotel','Hacienda Tayutic','Sitio de Mata, Turrialba, Cartago','En el Hotel Hacienda Tayutic la naturaleza y el arte forman parte esencial de la experiencia.' ,'9.881494','-83.627633','public/img/2.jpg');
 call sp_insert('i','u','y','c','v','hotel','Hacienda Tayutic','Sitio de Mata, Turrialba, Cartago','En el Hotel Hacienda Tayutic la naturaleza y el arte forman parte esencial de la experiencia.' ,'9.881494','-83.627633','public/img/2.jpg');
@@ -817,6 +818,7 @@ call sp_insert('e','u','b','c','p','hotel','Hacienda Tayutic','Sitio de Mata, Tu
 call sp_insert('c','u','b','c','p','hotel','Hacienda Tayutic','Sitio de Mata, Turrialba, Cartago','En el Hotel Hacienda Tayutic la naturaleza y el arte forman parte esencial de la experiencia.' ,'9.881494','-83.627633','public/img/2.jpg');
 call sp_insert('e','u','b','c','p','hotel','Hacienda Tayutic','Sitio de Mata, Turrialba, Cartago','En el Hotel Hacienda Tayutic la naturaleza y el arte forman parte esencial de la experiencia.' ,'9.881494','-83.627633','public/img/2.jpg');
 call sp_insert('c','r','y','c','p','hotel','Hacienda Tayutic','Sitio de Mata, Turrialba, Cartago','En el Hotel Hacienda Tayutic la naturaleza y el arte forman parte esencial de la experiencia.' ,'9.881494','-83.627633','public/img/2.jpg');
+call sp_insert('c','r','y','a','p','hotel','Hacienda Tayutic','Sitio de Mata, Turrialba, Cartago','En el Hotel Hacienda Tayutic la naturaleza y el arte forman parte esencial de la experiencia.' ,'9.881494','-83.627633','public/img/2.jpg');
 
 call sp_insert('e','r','b','a','p','natural','Paque Nacional Volcan Turrialba','Turrialba, Cartago','Desde varios puntos de la cima y en un dia despejado, se puede tener una vista panoramica de las llanuras del Caribe.','10.017519','-83.764965','public/img/5.jpeg');
 call sp_insert('c','r','y','b','v','natural','Paque Nacional Volcan Turrialba','Turrialba, Cartago','Desde varios puntos de la cima y en un dia despejado, se puede tener una vista panoramica de las llanuras del Caribe.','10.017519','-83.764965','public/img/5.jpeg');
@@ -845,12 +847,12 @@ call sp_insert('c','u','y','c','p','restaurante','Rancho El Sapito','Coliblanco 
 call sp_insert('i','u','b','b','p','restaurante','Rancho El Sapito','Coliblanco de Alavarado, Cartago','El Restaurante es amplio y con una atmosfera muy agradable, ideal para disfrutar con familiares y amigos.','9.944200','-83.775514','public/img/6.jpg');
 call sp_insert('e','r','y','c','v','restaurante','Rancho El Sapito','Coliblanco de Alavarado, Cartago','El Restaurante es amplio y con una atmosfera muy agradable, ideal para disfrutar con familiares y amigos.','9.944200','-83.775514','public/img/6.jpg');
 
-call sp_insert('e','r','b','a','p','paradero','Centro Turstico Don Ismael','La Suiza, Turrialba, Cartago','Aqui encontrara lo que necesita para el disfrute personal o familiar. Rodeado de un clima simplemente sabroso.','9.858720','-83.612436','public/img/7.jpg');
-call sp_insert('i','r','y','b','v','paradero','Centro Turstico Don Ismael','La Suiza, Turrialba, Cartago','Aqui encontrara lo que necesita para el disfrute personal o familiar. Rodeado de un clima simplemente sabroso.','9.858720','-83.612436','public/img/7.jpg');
-call sp_insert('i','r','y','c','v','paradero','Centro Turstico Don Ismael','La Suiza, Turrialba, Cartago','Aqui encontrara lo que necesita para el disfrute personal o familiar. Rodeado de un clima simplemente sabroso.','9.858720','-83.612436','public/img/7.jpg');
-call sp_insert('c','u','b','c','p','paradero','Centro Turstico Don Ismael','La Suiza, Turrialba, Cartago','Aqui encontrara lo que necesita para el disfrute personal o familiar. Rodeado de un clima simplemente sabroso.','9.858720','-83.612436','public/img/7.jpg');
-call sp_insert('e','u','y','a','v','paradero','Centro Turstico Don Ismael','La Suiza, Turrialba, Cartago','Aqui encontrara lo que necesita para el disfrute personal o familiar. Rodeado de un clima simplemente sabroso.','9.858720','-83.612436','public/img/7.jpg');
-call sp_insert('c','r','y','a','v','paradero','Centro Turstico Don Ismael','La Suiza, Turrialba, Cartago','Aqui encontrara lo que necesita para el disfrute personal o familiar. Rodeado de un clima simplemente sabroso.','9.858720','-83.612436','public/img/7.jpg');
+call sp_insert('e','r','b','a','p','paradero','Centro Turistico Don Ismael','La Suiza, Turrialba, Cartago','Aqui encontrara lo que necesita para el disfrute personal o familiar. Rodeado de un clima simplemente sabroso.','9.858720','-83.612436','public/img/7.jpg');
+call sp_insert('i','r','y','b','v','paradero','Centro Turistico Don Ismael','La Suiza, Turrialba, Cartago','Aqui encontrara lo que necesita para el disfrute personal o familiar. Rodeado de un clima simplemente sabroso.','9.858720','-83.612436','public/img/7.jpg');
+call sp_insert('i','r','y','c','v','paradero','Centro Turistico Don Ismael','La Suiza, Turrialba, Cartago','Aqui encontrara lo que necesita para el disfrute personal o familiar. Rodeado de un clima simplemente sabroso.','9.858720','-83.612436','public/img/7.jpg');
+call sp_insert('c','u','b','c','p','paradero','Centro Turistico Don Ismael','La Suiza, Turrialba, Cartago','Aqui encontrara lo que necesita para el disfrute personal o familiar. Rodeado de un clima simplemente sabroso.','9.858720','-83.612436','public/img/7.jpg');
+call sp_insert('e','u','y','a','v','paradero','Centro Turistico Don Ismael','La Suiza, Turrialba, Cartago','Aqui encontrara lo que necesita para el disfrute personal o familiar. Rodeado de un clima simplemente sabroso.','9.858720','-83.612436','public/img/7.jpg');
+call sp_insert('c','r','y','a','v','paradero','Centro Turistico Don Ismael','La Suiza, Turrialba, Cartago','Aqui encontrara lo que necesita para el disfrute personal o familiar. Rodeado de un clima simplemente sabroso.','9.858720','-83.612436','public/img/7.jpg');
 
 call sp_insert('c','r','b','b','p','hotel','Casa Turire','Atirro, Turrialba, Cartago','Este hermoso lugar esta envuelto por el Lago Angostura presenta un panorama fuera de serie.','9.862575','-83.645109','public/img/8.jpg');
 call sp_insert('e','u','b','a','v','hotel','Casa Turire','Atirro, Turrialba, Cartago','Este hermoso lugar esta envuelto por el Lago Angostura presenta un panorama fuera de serie.','9.862575','-83.645109','public/img/8.jpg');
@@ -872,3 +874,159 @@ call sp_insert('c','r','y','c','p','restaurante','Restaurante Mirador Sitios Ang
 call sp_insert('e','r','y','b','p','restaurante','Restaurante Mirador Sitios Angostura','Sitio de Mata, Turrialba, Cartago','Desde alli hay una excelente vista de la represa Angostura. Mientras usted come uno que otro colibri se acerca a comer tambien.','9.889716','-83.630128','public/img/10.jpg');
 call sp_insert('e','u','b','a','p','restaurante','Restaurante Mirador Sitios Angostura','Sitio de Mata, Turrialba, Cartago','Desde alli hay una excelente vista de la represa Angostura. Mientras usted come uno que otro colibri se acerca a comer tambien.','9.889716','-83.630128','public/img/10.jpg');
 call sp_insert('e','r','b','c','v','restaurante','Restaurante Mirador Sitios Angostura','Sitio de Mata, Turrialba, Cartago','Desde alli hay una excelente vista de la represa Angostura. Mientras usted come uno que otro colibri se acerca a comer tambien.','9.889716','-83.630128','public/img/10.jpg');
+
+call sp_insert('c','r','b','a','v','restaurante','Turrialtico Lodge','Pavones, Turrialba, Cartago','Turrialtico Lodge esta construido con hermosa madera rustica. El balcon del hotel ofrece las mejores vistas panoramicas del valle de Turrialba.','9.895085','-83.637209','public/img/11.jpg');
+call sp_insert('i','r','b','b','v','restaurante','Turrialtico Lodge','Pavones, Turrialba, Cartago','Turrialtico Lodge esta construido con hermosa madera rustica. El balcon del hotel ofrece las mejores vistas panoramicas del valle de Turrialba.','9.895085','-83.637209','public/img/11.jpg');
+call sp_insert('c','u','y','c','v','restaurante','Turrialtico Lodge','Pavones, Turrialba, Cartago','Turrialtico Lodge esta construido con hermosa madera rustica. El balcon del hotel ofrece las mejores vistas panoramicas del valle de Turrialba.','9.895085','-83.637209','public/img/11.jpg');
+call sp_insert('e','r','b','a','p','restaurante','Turrialtico Lodge','Pavones, Turrialba, Cartago','Turrialtico Lodge esta construido con hermosa madera rustica. El balcon del hotel ofrece las mejores vistas panoramicas del valle de Turrialba.','9.895085','-83.637209','public/img/11.jpg');
+call sp_insert('i','u','b','c','p','restaurante','Turrialtico Lodge','Pavones, Turrialba, Cartago','Turrialtico Lodge esta construido con hermosa madera rustica. El balcon del hotel ofrece las mejores vistas panoramicas del valle de Turrialba.','9.895085','-83.637209','public/img/11.jpg');
+call sp_insert('c','u','b','b','p','restaurante','Turrialtico Lodge','Pavones, Turrialba, Cartago','Turrialtico Lodge esta construido con hermosa madera rustica. El balcon del hotel ofrece las mejores vistas panoramicas del valle de Turrialba.','9.895085','-83.637209','public/img/11.jpg');
+
+call sp_insert('c','r','b','b','p','hotel','Rancho Naturalista','Tuis, Turrialba, Cartago','El principal hotel de observacion de aves en Costa Rica, Rancho Naturalista es uno de los mejores lodges de observacion de aves en America Central.','9.833345','-83.563900','public/img/12.jpg');
+call sp_insert('c','r','b','b','v','hotel','Rancho Naturalista','Tuis, Turrialba, Cartago','El principal hotel de observacion de aves en Costa Rica, Rancho Naturalista es uno de los mejores lodges de observacion de aves en America Central.','9.833345','-83.563900','public/img/12.jpg');
+call sp_insert('e','r','b','b','p','hotel','Rancho Naturalista','Tuis, Turrialba, Cartago','El principal hotel de observacion de aves en Costa Rica, Rancho Naturalista es uno de los mejores lodges de observacion de aves en America Central.','9.833345','-83.563900','public/img/12.jpg');
+call sp_insert('c','u','y','a','v','hotel','Rancho Naturalista','Tuis, Turrialba, Cartago','El principal hotel de observacion de aves en Costa Rica, Rancho Naturalista es uno de los mejores lodges de observacion de aves en America Central.','9.833345','-83.563900','public/img/12.jpg');
+call sp_insert('e','u','y','c','p','hotel','Rancho Naturalista','Tuis, Turrialba, Cartago','El principal hotel de observacion de aves en Costa Rica, Rancho Naturalista es uno de los mejores lodges de observacion de aves en America Central.','9.833345','-83.563900','public/img/12.jpg');
+call sp_insert('e','u','b','b','p','hotel','Rancho Naturalista','Tuis, Turrialba, Cartago','El principal hotel de observacion de aves en Costa Rica, Rancho Naturalista es uno de los mejores lodges de observacion de aves en America Central.','9.833345','-83.563900','public/img/12.jpg');
+
+call sp_insert('e','r','b','a','v','paradero','Piojos Pool','La Suiza, Turrialba, Cartago','Paradero Turistico','9.853222','-83.611430','public/img/13.jpg');
+call sp_insert('c','r','y','c','v','paradero','Piojos Pool','La Suiza, Turrialba, Cartago','Paradero Turistico','9.853222','-83.611430','public/img/13.jpg');
+call sp_insert('c','u','b','b','p','paradero','Piojos Pool','La Suiza, Turrialba, Cartago','Paradero Turistico','9.853222','-83.611430','public/img/13.jpg');
+call sp_insert('e','u','b','a','v','paradero','Piojos Pool','La Suiza, Turrialba, Cartago','Paradero Turistico','9.853222','-83.611430','public/img/13.jpg');
+call sp_insert('e','r','y','b','v','paradero','Piojos Pool','La Suiza, Turrialba, Cartago','Paradero Turistico','9.853222','-83.611430','public/img/13.jpg');
+call sp_insert('e','r','y','a','p','paradero','Piojos Pool','La Suiza, Turrialba, Cartago','Paradero Turistico','9.853222','-83.611430','public/img/13.jpg');
+
+call sp_insert('c','u','b','a','v','restaurante','Adrianos Restaurant','Canada, Turrialba, Cartago', 'Restaurante','9.860241','-83.622591','public/img/14.jpg');
+call sp_insert('e','u','b','c','v','restaurante','Adrianos Restaurant','Canada, Turrialba, Cartago', 'Restaurante','9.860241','-83.622591','public/img/14.jpg');
+call sp_insert('e','u','y','b','p','restaurante','Adrianos Restaurant','Canada, Turrialba, Cartago', 'Restaurante','9.860241','-83.622591','public/img/14.jpg');
+call sp_insert('i','u','b','a','p','restaurante','Adrianos Restaurant','Canada, Turrialba, Cartago', 'Restaurante','9.860241','-83.622591','public/img/14.jpg');
+call sp_insert('i','u','y','c','v','restaurante','Adrianos Restaurant','Canada, Turrialba, Cartago', 'Restaurante','9.860241','-83.622591','public/img/14.jpg');
+call sp_insert('c','u','y','b','v','restaurante','Adrianos Restaurant','Canada, Turrialba, Cartago', 'Restaurante','9.860241','-83.622591','public/img/14.jpg');
+
+call sp_insert('i','u','b','a','v','paradero','Complejo Deportivo el Varon','Turrialba, Cartago','Un lugar completamente distinto a cualquier otro complejo, pues cuenta con una vista panoramica del valle de Turrialba.','9.934150','-83.693036','public/img/15.jpg');
+call sp_insert('c','r','b','b','p','paradero','Complejo Deportivo el Varon','Turrialba, Cartago','Un lugar completamente distinto a cualquier otro complejo, pues cuenta con una vista panoramica del valle de Turrialba.','9.934150','-83.693036','public/img/15.jpg');
+call sp_insert('i','r','b','c','p','paradero','Complejo Deportivo el Varon','Turrialba, Cartago','Un lugar completamente distinto a cualquier otro complejo, pues cuenta con una vista panoramica del valle de Turrialba.','9.934150','-83.693036','public/img/15.jpg');
+call sp_insert('i','r','y','b','v','paradero','Complejo Deportivo el Varon','Turrialba, Cartago','Un lugar completamente distinto a cualquier otro complejo, pues cuenta con una vista panoramica del valle de Turrialba.','9.934150','-83.693036','public/img/15.jpg');
+call sp_insert('i','r','y','c','v','paradero','Complejo Deportivo el Varon','Turrialba, Cartago','Un lugar completamente distinto a cualquier otro complejo, pues cuenta con una vista panoramica del valle de Turrialba.','9.934150','-83.693036','public/img/15.jpg');
+call sp_insert('c','r','y','b','p','paradero','Complejo Deportivo el Varon','Turrialba, Cartago','Un lugar completamente distinto a cualquier otro complejo, pues cuenta con una vista panoramica del valle de Turrialba.','9.934150','-83.693036','public/img/15.jpg');
+
+call sp_insert('e','r','b','b','p','natural','Rio Pejibaye' ,'Pejibaye, Jimenez, Cartago','Apto para la practica de rafting, posee rapidos que personas de cualquier edad pueden disfrutar plenamente.','9.793242','-83.690331','public/img/16.jpeg');
+call sp_insert('i','u','y','b','p','natural','Rio Pejibaye' ,'Pejibaye, Jimenez, Cartago','Apto para la practica de rafting, posee rapidos que personas de cualquier edad pueden disfrutar plenamente.','9.793242','-83.690331','public/img/16.jpeg');
+call sp_insert('i','r','b','c','v','natural','Rio Pejibaye' ,'Pejibaye, Jimenez, Cartago','Apto para la practica de rafting, posee rapidos que personas de cualquier edad pueden disfrutar plenamente.','9.793242','-83.690331','public/img/16.jpeg');
+call sp_insert('e','r','b','c','v','natural','Rio Pejibaye' ,'Pejibaye, Jimenez, Cartago','Apto para la practica de rafting, posee rapidos que personas de cualquier edad pueden disfrutar plenamente.','9.793242','-83.690331','public/img/16.jpeg');
+call sp_insert('c','u','y','a','v','natural','Rio Pejibaye' ,'Pejibaye, Jimenez, Cartago','Apto para la practica de rafting, posee rapidos que personas de cualquier edad pueden disfrutar plenamente.','9.793242','-83.690331','public/img/16.jpeg');
+call sp_insert('i','u','b','a','v','natural','Rio Pejibaye' ,'Pejibaye, Jimenez, Cartago','Apto para la practica de rafting, posee rapidos que personas de cualquier edad pueden disfrutar plenamente.','9.793242','-83.690331','public/img/16.jpeg');
+
+call sp_insert('c','r','b','b','v','paradero','Parapente Turrialba','Santa Cruz, Turrialba, Cartago','En Santa Cruz de Turrialba encontramos una zona de vuelo privilegiada. Con una buenisima superficie para el despegue y una excelente vista.','9.960460','-83.749607','public/img/17.jpg');
+call sp_insert('c','r','b','b','p','paradero','Parapente Turrialba','Santa Cruz, Turrialba, Cartago','En Santa Cruz de Turrialba encontramos una zona de vuelo privilegiada. Con una buenisima superficie para el despegue y una excelente vista.','9.960460','-83.749607','public/img/17.jpg');
+call sp_insert('i','r','b','a','p','paradero','Parapente Turrialba','Santa Cruz, Turrialba, Cartago','En Santa Cruz de Turrialba encontramos una zona de vuelo privilegiada. Con una buenisima superficie para el despegue y una excelente vista.','9.960460','-83.749607','public/img/17.jpg');
+call sp_insert('e','r','y','b','v','paradero','Parapente Turrialba','Santa Cruz, Turrialba, Cartago','En Santa Cruz de Turrialba encontramos una zona de vuelo privilegiada. Con una buenisima superficie para el despegue y una excelente vista.','9.960460','-83.749607','public/img/17.jpg');
+call sp_insert('c','u','y','c','p','paradero','Parapente Turrialba','Santa Cruz, Turrialba, Cartago','En Santa Cruz de Turrialba encontramos una zona de vuelo privilegiada. Con una buenisima superficie para el despegue y una excelente vista.','9.960460','-83.749607','public/img/17.jpg');
+call sp_insert('e','r','b','c','p','paradero','Parapente Turrialba','Santa Cruz, Turrialba, Cartago','En Santa Cruz de Turrialba encontramos una zona de vuelo privilegiada. Con una buenisima superficie para el despegue y una excelente vista.','9.960460','-83.749607','public/img/17.jpg');
+
+call sp_insert('i','r','b','b','p','paradero','Finca Vialig','Pacayitas, Turrialba, Cartago','El Centro Operacional de Finca ViaLig se encuentra ubicado en una hermosa comunidad, donde las personas son amables y con la esperanza de ser cada dia mejor.','9.882631','-83.582302','public/img/18.jpg');
+call sp_insert('c','u','b','a','p','paradero','Finca Vialig','Pacayitas, Turrialba, Cartago','El Centro Operacional de Finca ViaLig se encuentra ubicado en una hermosa comunidad, donde las personas son amables y con la esperanza de ser cada dia mejor.','9.882631','-83.582302','public/img/18.jpg');
+call sp_insert('i','u','y','a','v','paradero','Finca Vialig','Pacayitas, Turrialba, Cartago','El Centro Operacional de Finca ViaLig se encuentra ubicado en una hermosa comunidad, donde las personas son amables y con la esperanza de ser cada dia mejor.','9.882631','-83.582302','public/img/18.jpg');
+call sp_insert('i','u','b','a','v','paradero','Finca Vialig','Pacayitas, Turrialba, Cartago','El Centro Operacional de Finca ViaLig se encuentra ubicado en una hermosa comunidad, donde las personas son amables y con la esperanza de ser cada dia mejor.','9.882631','-83.582302','public/img/18.jpg');
+call sp_insert('i','r','y','a','v','paradero','Finca Vialig','Pacayitas, Turrialba, Cartago','El Centro Operacional de Finca ViaLig se encuentra ubicado en una hermosa comunidad, donde las personas son amables y con la esperanza de ser cada dia mejor.','9.882631','-83.582302','public/img/18.jpg');
+
+call sp_insert('e','r','b','b','p','natural','Aquiares Waterfall','Aquiares, Turrialba, Cartago','Belleza pura. Todas las grandes cosas en una. Desde increibles vistas, hasta las hermosas cascadas y las piscinas naturales de los rios.','9.941796','-83.720544','public/img/19.jpg');
+call sp_insert('e','r','b','c','v','natural','Aquiares Waterfall','Aquiares, Turrialba, Cartago','Belleza pura. Todas las grandes cosas en una. Desde increibles vistas, hasta las hermosas cascadas y las piscinas naturales de los rios.','9.941796','-83.720544','public/img/19.jpg');
+call sp_insert('c','r','y','c','v','natural','Aquiares Waterfall','Aquiares, Turrialba, Cartago','Belleza pura. Todas las grandes cosas en una. Desde increibles vistas, hasta las hermosas cascadas y las piscinas naturales de los rios.','9.941796','-83.720544','public/img/19.jpg');
+call sp_insert('c','u','y','b','p','natural','Aquiares Waterfall','Aquiares, Turrialba, Cartago','Belleza pura. Todas las grandes cosas en una. Desde increibles vistas, hasta las hermosas cascadas y las piscinas naturales de los rios.','9.941796','-83.720544','public/img/19.jpg');
+call sp_insert('i','r','b','b','p','natural','Aquiares Waterfall','Aquiares, Turrialba, Cartago','Belleza pura. Todas las grandes cosas en una. Desde increibles vistas, hasta las hermosas cascadas y las piscinas naturales de los rios.','9.941796','-83.720544','public/img/19.jpg');
+
+call sp_insert('c','r','b','a','v','hotel','Siloe Lodge','La Suiza, Turrialba, Cartago','Un lugar lleno de Paz y tranquilidad,muy seguro, rodeado de areas verdes. Habitaciones limpias y frescas muy aseadas y confortables.','9.868452','-83.633771','public/img/20.jpg');
+call sp_insert('i','u','b','c','p','hotel','Siloe Lodge','La Suiza, Turrialba, Cartago','Un lugar lleno de Paz y tranquilidad,muy seguro, rodeado de areas verdes. Habitaciones limpias y frescas muy aseadas y confortables.','9.868452','-83.633771','public/img/20.jpg');
+call sp_insert('c','u','y','c','v','hotel','Siloe Lodge','La Suiza, Turrialba, Cartago','Un lugar lleno de Paz y tranquilidad,muy seguro, rodeado de areas verdes. Habitaciones limpias y frescas muy aseadas y confortables.','9.868452','-83.633771','public/img/20.jpg');
+call sp_insert('e','u','y','a','v','hotel','Siloe Lodge','La Suiza, Turrialba, Cartago','Un lugar lleno de Paz y tranquilidad,muy seguro, rodeado de areas verdes. Habitaciones limpias y frescas muy aseadas y confortables.','9.868452','-83.633771','public/img/20.jpg');
+
+call sp_insert('c','u','y','c','v','hotel','Hotel Maribu Caribe','Puerto Limon, Limon','Es un hotel de primera clase, ubicado en una exuberante zona tropical de Costa Rica donde se pueden apreciar maravillosos y relajantes paisajes.','10.013473','-83.049977','public/img/21.jpg');
+call sp_insert('c','r','b','b','p','hotel','Hotel Maribu Caribe','Puerto Limon, Limon','Es un hotel de primera clase, ubicado en una exuberante zona tropical de Costa Rica donde se pueden apreciar maravillosos y relajantes paisajes.','10.013473','-83.049977','public/img/21.jpg');
+call sp_insert('c','u','y','c','v','hotel','Hotel Maribu Caribe','Puerto Limon, Limon','Es un hotel de primera clase, ubicado en una exuberante zona tropical de Costa Rica donde se pueden apreciar maravillosos y relajantes paisajes.','10.013473','-83.049977','public/img/21.jpg');
+call sp_insert('i','u','y','b','v','hotel','Hotel Maribu Caribe','Puerto Limon, Limon','Es un hotel de primera clase, ubicado en una exuberante zona tropical de Costa Rica donde se pueden apreciar maravillosos y relajantes paisajes.','10.013473','-83.049977','public/img/21.jpg');
+call sp_insert('c','u','b','a','v','hotel','Hotel Maribu Caribe','Puerto Limon, Limon','Es un hotel de primera clase, ubicado en una exuberante zona tropical de Costa Rica donde se pueden apreciar maravillosos y relajantes paisajes.','10.013473','-83.049977','public/img/21.jpg');
+
+call sp_insert('c','u','y','c','v','hotel','Hotel Playa Bonita','Playa Bonita, Limon','El Hotel esta estrategicamente ubicado, donde usted puede visitar lugares con gran valor historico.','10.009726','-83.062047','public/img/22.jpg');
+call sp_insert('e','u','y','a','v','hotel','Hotel Playa Bonita','Playa Bonita, Limon','El Hotel esta estrategicamente ubicado, donde usted puede visitar lugares con gran valor historico.','10.009726','-83.062047','public/img/22.jpg');
+call sp_insert('c','r','b','c','v','hotel','Hotel Playa Bonita','Playa Bonita, Limon','El Hotel esta estrategicamente ubicado, donde usted puede visitar lugares con gran valor historico.','10.009726','-83.062047','public/img/22.jpg');
+call sp_insert('c','r','b','b','v','hotel','Hotel Playa Bonita','Playa Bonita, Limon','El Hotel esta estrategicamente ubicado, donde usted puede visitar lugares con gran valor historico.','10.009726','-83.062047','public/img/22.jpg');
+call sp_insert('c','r','b','c','v','hotel','Hotel Playa Bonita','Playa Bonita, Limon','El Hotel esta estrategicamente ubicado, donde usted puede visitar lugares con gran valor historico.','10.009726','-83.062047','public/img/22.jpg');
+
+call sp_insert('c','u','y','c','v','hotel','Hotel Oasys del Caribe','Puerto Limon, Limon','Nuestro hotel esta ubicado a pocos minutos del centro de la ciudad de Limon y cerca de la playa.','10.009298','-83.048853','public/img/23.jpg');
+call sp_insert('e','r','b','a','v','hotel','Hotel Oasys del Caribe','Puerto Limon, Limon','Nuestro hotel esta ubicado a pocos minutos del centro de la ciudad de Limon y cerca de la playa.','10.009298','-83.048853','public/img/23.jpg');
+call sp_insert('c','u','y','b','v','hotel','Hotel Oasys del Caribe','Puerto Limon, Limon','Nuestro hotel esta ubicado a pocos minutos del centro de la ciudad de Limon y cerca de la playa.','10.009298','-83.048853','public/img/23.jpg');
+call sp_insert('e','u','b','b','p','hotel','Hotel Oasys del Caribe','Puerto Limon, Limon','Nuestro hotel esta ubicado a pocos minutos del centro de la ciudad de Limon y cerca de la playa.','10.009298','-83.048853','public/img/23.jpg');
+call sp_insert('c','r','b','a','v','hotel','Hotel Oasys del Caribe','Puerto Limon, Limon','Nuestro hotel esta ubicado a pocos minutos del centro de la ciudad de Limon y cerca de la playa.','10.009298','-83.048853','public/img/23.jpg');
+
+call sp_insert('c','u','b','a','v','hotel','Hotel Wagelia','Turrialba, Cartago','Hermoso Hotel en el centro de Turrialba.','9.903657','-83.670802','public/img/24.png');
+call sp_insert('i','r','y','c','p','hotel','Hotel Wagelia','Turrialba, Cartago','Hermoso Hotel en el centro de Turrialba.','9.903657','-83.670802','public/img/24.png');
+call sp_insert('e','r','b','c','p','hotel','Hotel Wagelia','Turrialba, Cartago','Hermoso Hotel en el centro de Turrialba.','9.903657','-83.670802','public/img/24.png');
+call sp_insert('e','u','y','b','p','hotel','Hotel Wagelia','Turrialba, Cartago','Hermoso Hotel en el centro de Turrialba.','9.903657','-83.670802','public/img/24.png');
+call sp_insert('c','u','y','p','p','hotel','Hotel Wagelia','Turrialba, Cartago','Hermoso Hotel en el centro de Turrialba.','9.903657','-83.670802','public/img/24.png');
+
+call sp_insert('i','u','b','b','v','restaurante','Restaurante La Flor','Turrialba, Cartago','Restaurante con deliciosa comida casera','9.903657','-83.67802','public/img/24.png');
+call sp_insert('c','r','b','c','v','restaurante','Restaurante La Flor','Turrialba, Cartago','Restaurante con deliciosa comida casera','9.903657','-83.67802','public/img/24.png');
+call sp_insert('e','u','b','b','v','restaurante','Restaurante La Flor','Turrialba, Cartago','Restaurante con deliciosa comida casera','9.903657','-83.67802','public/img/24.png');
+call sp_insert('e','r','y','c','p','restaurante','Restaurante La Flor','Turrialba, Cartago','Restaurante con deliciosa comida casera','9.903657','-83.67802','public/img/24.png');
+call sp_insert('e','u','b','c','v','restaurante','Restaurante La Flor','Turrialba, Cartago','Restaurante con deliciosa comida casera','9.903657','-83.67802','public/img/24.png');
+
+call sp_insert('e','r','b','c','p','paradero','Atreus','Turrialba, Cartago','Mariposario','9.903657','-83.670802','public/img/24.png');
+call sp_insert('e','r','b','a','v','paradero','Atreus','Turrialba, Cartago','Mariposario','9.903657','-83.670802','public/img/24.png');
+call sp_insert('e','r','b','a','v','paradero','Atreus','Turrialba, Cartago','Mariposario','9.903657','-83.670802','public/img/24.png');
+call sp_insert('i','u','b','c','v','paradero','Atreus','Turrialba, Cartago','Mariposario','9.903657','-83.670802','public/img/24.png');
+call sp_insert('i','r','y','a','v','paradero','Atreus','Turrialba, Cartago','Mariposario','9.903657','-83.670802','public/img/24.png');
+
+call sp_insert('i','r','b','a','p','paradero','Rancho San Rafael','Turrialba, Cartago','Paradero Turistico','9.903657','-83.670802','public/img/24.png');
+call sp_insert('i','r','y','a','v','paradero','Rancho San Rafael','Turrialba, Cartago','Paradero Turistico','9.903657','-83.670802','public/img/24.png');
+call sp_insert('c','u','b','a','v','paradero','Rancho San Rafael','Turrialba, Cartago','Paradero Turistico','9.903657','-83.670802','public/img/24.png');
+call sp_insert('e','u','y','a','p','paradero','Rancho San Rafael','Turrialba, Cartago','Paradero Turistico','9.903657','-83.670802','public/img/24.png');
+call sp_insert('i','u','b','c','v','paradero','Rancho San Rafael','Turrialba, Cartago','Paradero Turistico','9.903657','-83.670802','public/img/24.png');
+
+call sp_insert('e','u','b','b','v','paradero','La Esperanza','Turrialba, Cartago','Paradero Turistico','9.903657','-83.670802','public/img/24.png');
+call sp_insert('e','u','y','a','p','paradero','La Esperanza','Turrialba, Cartago','Paradero Turistico','9.903657','-83.670802','public/img/24.png');
+call sp_insert('i','u','b','a','v','paradero','La Esperanza','Turrialba, Cartago','Paradero Turistico','9.903657','-83.670802','public/img/24.png');
+call sp_insert('i','r','y','b','v','paradero','La Esperanza','Turrialba, Cartago','Paradero Turistico','9.903657','-83.670802','public/img/24.png');
+call sp_insert('c','r','b','b','v','paradero','La Esperanza','Turrialba, Cartago','Paradero Turistico','9.903657','-83.670802','public/img/24.png');
+
+call sp_insert('c','r','b','c','v','paradero','Rancho el Sol','Turrialba, Cartago','Paradero Turistico','9.903657','-83.670802','public/img/24.png');
+call sp_insert('i','r','b','b','p','paradero','Rancho el Sol','Turrialba, Cartago','Paradero Turistico','9.903657','-83.670802','public/img/24.png');
+call sp_insert('i','r','y','c','p','paradero','Rancho el Sol','Turrialba, Cartago','Paradero Turistico','9.903657','-83.670802','public/img/24.png');
+call sp_insert('i','u','b','a','v','paradero','Rancho el Sol','Turrialba, Cartago','Paradero Turistico','9.903657','-83.670802','public/img/24.png');
+call sp_insert('c','u','y','a','p','paradero','Rancho el Sol','Turrialba, Cartago','Paradero Turistico','9.903657','-83.670802','public/img/24.png');
+
+call sp_insert('e','u','b','c','v','hotel','Rancho Monteverde','Turrialba, Cartago','Restaurante','9.903657','-83.670802','public/img/24.png');
+call sp_insert('i','u','y','a','v','hotel','Rancho Monteverde','Turrialba, Cartago','Restaurante','9.903657','-83.670802','public/img/24.png');
+call sp_insert('i','r','y','c','v','hotel','Rancho Monteverde','Turrialba, Cartago','Restaurante','9.903657','-83.670802','public/img/24.png');
+call sp_insert('c','u','y','b','v','hotel','Rancho Monteverde','Turrialba, Cartago','Restaurante','9.903657','-83.670802','public/img/24.png');
+call sp_insert('i','u','b','b','v','hotel','Rancho Monteverde','Turrialba, Cartago','Restaurante','9.903657','-83.670802','public/img/24.png');
+
+call sp_insert('i','u','b','a','p','hotel','Rancho el Veroliz','Turrialba, Cartago','Paradero Turistico','9.903657','-83.670802','public/img/24.png');
+call sp_insert('e','r','y','b','p','hotel','Rancho el Veroliz','Turrialba, Cartago','Paradero Turistico','9.903657','-83.670802','public/img/24.png');
+call sp_insert('c','u','b','b','p','hotel','Rancho el Veroliz','Turrialba, Cartago','Paradero Turistico','9.903657','-83.670802','public/img/24.png');
+call sp_insert('i','r','b','c','p','hotel','Rancho el Veroliz','Turrialba, Cartago','Paradero Turistico','9.903657','-83.670802','public/img/24.png');
+call sp_insert('e','u','y','c','p','hotel','Rancho el Veroliz','Turrialba, Cartago','Paradero Turistico','9.903657','-83.670802','public/img/24.png');
+
+call sp_insert('i','u','b','b','v','restaurante','El manantial','Turrialba, Cartago','Restaurante','9.903657','-83.670802','public/img/24.png');
+call sp_insert('e','u','y','b','p','restaurante','El manantial','Turrialba, Cartago','Restaurante','9.903657','-83.670802','public/img/24.png');
+call sp_insert('e','u','y','c','p','restaurante','El manantial','Turrialba, Cartago','Restaurante','9.903657','-83.670802','public/img/24.png');
+call sp_insert('c','u','y','a','v','restaurante','El manantial','Turrialba, Cartago','Restaurante','9.903657','-83.670802','public/img/24.png');
+call sp_insert('i','r','y','c','p','restaurante','El manantial','Turrialba, Cartago','Restaurante','9.903657','-83.670802','public/img/24.png');
+
+call sp_insert('c','r','b','a','p','hotel','Mountain Hotel','Turrialba, Cartago','Hotel / Restaurante','9.903657','-83.670802','public/img/24.png');
+call sp_insert('e','r','y','c','p','hotel','Mountain Hotel','Turrialba, Cartago','Hotel / Restaurante','9.903657','-83.670802','public/img/24.png');
+call sp_insert('c','r','b','a','p','hotel','Mountain Hotel','Turrialba, Cartago','Hotel / Restaurante','9.903657','-83.670802','public/img/24.png');
+call sp_insert('e','r','b','b','p','hotel','Mountain Hotel','Turrialba, Cartago','Hotel / Restaurante','9.903657','-83.670802','public/img/24.png');
+call sp_insert('i','u','y','b','v','hotel','Mountain Hotel','Turrialba, Cartago','Hotel / Restaurante','9.903657','-83.670802','public/img/24.png');
+
+call sp_insert('e','u','b','a','p','hotel','Hotel Patito','Turrialba, Cartago','Hotel','9.903.657','-83.670802','public/img/24.png');
+call sp_insert('c','r','y','a','v','hotel','Hotel Patito','Turrialba, Cartago','Hotel','9.903.657','-83.670802','public/img/24.png');
+call sp_insert('i','r','y','b','p','hotel','Hotel Patito','Turrialba, Cartago','Hotel','9.903.657','-83.670802','public/img/24.png');
+call sp_insert('i','r','y','c','v','hotel','Hotel Patito','Turrialba, Cartago','Hotel','9.903.657','-83.670802','public/img/24.png');
+call sp_insert('c','r','b','a','v','hotel','Hotel Patito','Turrialba, Cartago','Hotel','9.903.657','-83.670802','public/img/24.png');
+
+call sp_insert('c','r','b','b','v','restaurante','La Pastora','Turrialba, Cartago','Restaurante','9.903657','-83.670802','public/img/24.png');
+call sp_insert('e','u','b','b','v','restaurante','La Pastora','Turrialba, Cartago','Restaurante','9.903657','-83.670802','public/img/24.png');
+call sp_insert('i','u','b','c','v','restaurante','La Pastora','Turrialba, Cartago','Restaurante','9.903657','-83.670802','public/img/24.png');
+call sp_insert('c','u','y','c','v','restaurante','La Pastora','Turrialba, Cartago','Restaurante','9.903657','-83.670802','public/img/24.png');
+call sp_insert('i','r','b','c','p','restaurante','La Pastora','Turrialba, Cartago','Restaurante','9.903657','-83.670802','public/img/24.png');
