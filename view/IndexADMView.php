@@ -5,7 +5,7 @@ include_once 'public/header.php';
 </div>
 <ol class="breadcrumb">
     <li class="breadcrumb-item">
-        <a href="?Controller=Index&action=indexADM">Home</a>
+        <a href="?controller=Index&action=indexADM">Home</a>
     </li>
     <li class="breadcrumb-item active">Inicio Admnistrador</li>
 </ol>
