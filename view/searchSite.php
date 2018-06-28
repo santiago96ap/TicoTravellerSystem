@@ -80,16 +80,18 @@ include_once 'public/header.php';
             <button id="videoSitio1" type="button" class="btn btn-outline-info ">Video</button>
         </center>
         
-            <div class="row inner-sec-w3layouts-agileinfo">
+        <div class="row inner-sec-w3layouts-agileinfo">
             <div class="col-md-4 proj_gallery_grid" data-aos="zoom-in"></div>
             <div class="col-md-4 proj_gallery_grid" data-aos="zoom-in">
                 <div class="section_1_gallery_grid">
-                    <a  id="img1" title="Imagen del sitio" href="">
-                        <div class="section_1_gallery_grid1">
-                            <img id="imgSitio1" src="public/images/p4Tiempo.png" alt=" " class="img-responsive" />
-                        </div>
-                    </a>
+                  <div class="container-enlarge">
+                    <img id="imgSitio1" src="public/images/p4Tiempo.png" alt=" " class="img-responsive" />
+                            <span id="simgSitio"><img src=""></span>
+                  </div>
+
+                    
                 </div>
+
             </div>
             <div class="col-md-4 proj_gallery_grid" data-aos="zoom-in"></div>
         </div>

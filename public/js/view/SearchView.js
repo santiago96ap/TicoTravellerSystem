@@ -18,13 +18,14 @@
             var sitios = JSON.parse(data);
             $('#result').show();
             $('#map').show();
-            alert(data);
+            //alert(data);
             document.getElementById('nombreSitio').innerHTML = sitios[1];
             document.getElementById('nombreSitioModal').innerHTML = sitios[1];
             document.getElementById('direccionSitioModal').innerHTML = sitios[2];
             document.getElementById('descripcionSitioModal').innerHTML = sitios[3];
             document.getElementById('imgSitio1').src = sitios[6];
-            document.getElementById('img1').href = sitios[6];
+            document.getElementById('simgSitio').innerHTML = '<img src="'+sitios[6]+'">';
+            //$("#simgSitio").append('<img src="'+sitios[6]+'">');
             
             marker.setMap(null);
 
