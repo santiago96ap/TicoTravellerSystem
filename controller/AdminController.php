@@ -9,6 +9,9 @@ class AdminController {
         $this->view->show("indexView.php");
     }
 
+    /*
+     * El metodo insertSite se encarga de realizar el proceso de insercion de los datos de un nuevo sitio turistico proveniente de la vista. 
+     */
     function insertSite() {
         require 'model/AdminModel.php';
         $model = new AdminModel();
@@ -44,6 +47,9 @@ class AdminController {
         echo json_encode($result);
     }
 
+    /*
+     * El metodo obtiene los nombres de todos los sitios registrados.
+     */
 	function updateDeleteSite() {
 	   	require 'model/AdminModel.php';
         $model = new AdminModel();
@@ -51,6 +57,9 @@ class AdminController {
         $this->view->show("ActModSitioView.php", $result);  
 	} 
 
+    /*
+     * El metodo se encarga de obtener los nombres de todos los sitios turisticos de la base de datos
+     */
 	function listSite() {
 	   	require 'model/AdminModel.php';
         $model = new AdminModel();
@@ -58,6 +67,9 @@ class AdminController {
         $this->view->show("ListarSitioView.php", $result);  
 	}     
 
+    /*
+     * El metodo se encarga de eliminar un registro especifico de la base de datos
+     */
     function deleteSite() {
 
 		require 'model/AdminModel.php';
@@ -66,6 +78,9 @@ class AdminController {
         echo json_encode($result);
     }
 
+    /*
+     * El metodo se encarga de actualizar los datos de un registro especifico
+     */
     function updateSite() {
         require 'model/AdminModel.php';
         $model = new AdminModel();
@@ -102,6 +117,9 @@ class AdminController {
         echo json_encode($result);
     }
 
+    /*
+     * El metodo se encarga de obtener la información de un sitio especificos
+     */
     function getInformationSite() {
         require 'model/AdminModel.php';
         $model = new AdminModel();

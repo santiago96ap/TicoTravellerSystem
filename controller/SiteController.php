@@ -12,8 +12,6 @@ class SiteController {
         $this->view->show("indexView.php");
     }
 
-    /*****************************************APLICACIÓN ANDROID********************************************/
-
     /*
      * El metodo se encarga de obtener los nombres de todos los sitios turisticos de la base de datos
      */
@@ -26,7 +24,7 @@ class SiteController {
 
     /*
      * El metodo se encarga de obtener toda la informacion relacionada a un sitio turistico
-     * de acuerdo al nombre que el usuario ingreso en la busqueda en la aplicacion movil
+     * de acuerdo al nombre que el usuario ingreso en la busqueda
      */
     function getSiteInformation() {
         require 'model/SiteModel.php';
@@ -37,7 +35,8 @@ class SiteController {
     
     /*
      * El metodo se encarga de obtener toda la informacion relacionada a todos los sitios 
-     * turisticos alojados en la base de datos
+     * turisticos alojados en la base de datos, pertenecientes a una categoria especifica segun a la cual pertenezca el registro proporcionado.
+     Este metodo es el que obtiene los registro que pertenecen a la misma categoria que el registro proporcionado por el usuario.
      */
     function getCategorySites($price, $preferencePlace, $destinationType, $time, $road) {
         require 'model/SiteModel.php';
@@ -46,6 +45,9 @@ class SiteController {
         return $result;
     }
 
+    /*
+     * El metodo se encarga de obtener los nombres de todos los sitios turisticos de la base de datos, independientemente de la categoria a la que los mismo pertenezcan
+     */
     function getAllSites() {
         require 'model/SiteModel.php';
         $model = new SiteModel();
@@ -75,7 +77,7 @@ class SiteController {
     
     /*
      * El metodo es el encargado de gestionar todo lo relacionado a calcular la similitud de los datos ingresados 
-     * por el usuario con los de las caracteristicas de los sitios turisticos alojados en la base de datos.
+     * por el usuario con los de las caracteristicas de los sitios turisticos alojados en la base de datos que pertenecen a la misma categoria a la que bayes considero que pertenecia los datos brindados por el usuario.
      * Logra obtener despues de aplicar el Algoritmo de Euclides los 3 sitios turisticos mas similares a las caracteristicas
      * ingresadas por el usuario, para despues retornarlos y enviarlos a la aplicacion movil
      */
@@ -148,8 +150,9 @@ class SiteController {
     }//build_sorter
 
 
-    /*****************************APLICACIÓN WEB***************************/
-
+    /*
+     * El metodo se encarga realizar la busqueda por string segun los datos proporcionados por el usuario. Comparando el string proporcionado por el usuario, con cada un de los sitios de la base de datos.
+     */
     public function searchSite() {
         if(isset($_REQUEST['name'])){       
             $siteName = array($_REQUEST['name']);
