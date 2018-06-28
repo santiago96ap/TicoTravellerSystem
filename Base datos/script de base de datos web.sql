@@ -367,6 +367,8 @@ BEGIN
     END;
     
     START TRANSACTION;
+
+    /*REALIZA LA INSERCION DEL SITIO TURISTICO*/
     
     IF EXISTS (select name, x, y from tb_destinations WHERE name = new_name and x = new_x and y = new_y) THEN
         SET last_id = (SELECT id FROM tb_destinations where (name = new_name and x = new_x and y = new_y)); 
@@ -379,6 +381,8 @@ BEGIN
     
     INSERT INTO tb_value_destinations (class, price, preference_place, destination_type, travel_time, road_type, id_destination)
     VALUES(new_class, new_price, new_preference_place, new_destination_type, new_travel_time, new_road_type, last_id);
+
+    /*REALIZA EL CALCULO DE LAS PROBABILIDADES DE ACUERDO AL NUEVO REGISTRO*/
     
     call sp_update_probabilities_destinations (new_price, new_preference_place, new_destination_type, new_travel_time, new_road_type, new_class);
     
@@ -463,6 +467,8 @@ BEGIN
     SET SQL_SAFE_UPDATES = 0;
     DELETE FROM TMPCategory;
     SET SQL_SAFE_UPDATES = 1;
+
+    /*RETORNA TODOS LOS REGISTROS DE LA CATEGORIA ENCONTRADA POR BAYES*/
     
     SELECT distinct tb_destinations.id, name, address, description, x, y, image, price, preference_place, destination_type, travel_time, road_type
     FROM tb_value_destinations, tb_destinations 
@@ -501,7 +507,8 @@ CREATE PROCEDURE sp_delete_destination(
         SET SQL_SAFE_UPDATES = 1;  
         
         /*seccion para eliminar los valores asociados al registro que se desea eliminar*/
-        
+
+        /*OBTIENE LOS VALOES DE CADA ATRIBUTO DEL REGISTRO A ELIMINAR*/
         SET id_temp=(SELECT id FROM tb_value_destinations WHERE tb_value_destinations.id_destination= destination_id LIMIT 1);
         SET temp_price=(SELECT price FROM tb_value_destinations WHERE id=id_temp);
         SET temp_preference_place=(SELECT preference_place FROM tb_value_destinations WHERE id=id_temp);
@@ -511,7 +518,7 @@ CREATE PROCEDURE sp_delete_destination(
         SET temp_class=(SELECT class FROM tb_value_destinations WHERE id=id_temp);
        
        
-        /*TABLA TEMPORAL PARA ALMACENAR LOS DATOS DE LA NUEVA INSERCION*/
+        /*TABLA TEMPORAL PARA ALMACENAR LOS DATOS DEL REGISTRO A ELIMINAR*/
         INSERT INTO TMP (id,attribute_name,attribute_value)
         VALUES (1,'price',temp_price),(2,'preference_place',temp_preference_place),
         (3,'destination_type',temp_destination_type),(4,'travel_time',temp_travel_time),(5,'road_type',temp_road_type);
@@ -527,6 +534,7 @@ CREATE PROCEDURE sp_delete_destination(
             SET attribute_name_= (SELECT attribute_name FROM TMP WHERE active=1 LIMIT 1);
             SET attribute_value_= (SELECT attribute_value FROM TMP WHERE active=1 LIMIT 1);
             
+            /*PONE EN CERO LAS PROBABILIDADES ASOCIADAS A CADA UNO DE LOS ATRIBUTOS DEL REGISTRO A ELIMINAR*/
             IF NOT EXISTS (SELECT * FROM tb_destinations_probabilities WHERE attribute_value=attribute_value_ AND repetition > 1) THEN
                 SET SQL_SAFE_UPDATES = 0; 
                 UPDATE tb_destinations_values SET repetition=0 WHERE attribute_name=attribute_name_ ;
@@ -534,11 +542,13 @@ CREATE PROCEDURE sp_delete_destination(
                 SET SQL_SAFE_UPDATES = 1;          
             END IF;                
             
+            /*RESTA LA CANTIDAD DE REPETICIONES QUE ESTABAN ASOCIADAS A LOS ATRIBUTOS DEL REGISTRO A ELIMINAR*/
             SET SQL_SAFE_UPDATES = 0; 
             UPDATE tb_destinations_probabilities SET repetition=repetition-1 
             WHERE attribute_name=attribute_name_ AND  attribute_value=attribute_value_ AND temp_class=category;
             SET SQL_SAFE_UPDATES = 1;  
             
+            /*ELIMINA LAS PROBABILIDADES ASOCIADAS A CADA UNO DE LOS ATRIBUTOS DEL REGISTRO A ELIMINAR*/
             IF EXISTS (SELECT * FROM tb_destinations_probabilities WHERE attribute_name=attribute_name_ AND  attribute_value=attribute_value_ AND temp_class=category AND repetition=0) THEN
                 SET SQL_SAFE_UPDATES = 0; 
                 DELETE FROM tb_destinations_probabilities WHERE attribute_name=attribute_name_ AND  attribute_value=attribute_value_ AND repetition=0;
@@ -556,10 +566,12 @@ CREATE PROCEDURE sp_delete_destination(
         DELETE FROM TMP;
         SET SQL_SAFE_UPDATES = 1;   
         
+        /*RESTA LA CANTIDAD DE REPETICIONES QUE ESTABAN ASOCIADAS A LA CATEGORIA DEL REGISTRO A ELIMINAR*/
         SET SQL_SAFE_UPDATES = 0; 
         UPDATE tb_destinations_values SET repetition=repetition-1 WHERE attribute_name=temp_class ;
         SET SQL_SAFE_UPDATES = 1; 
         
+        /*ELIMINA EL REGISTRO DE LA CATEGORIA ASOCIADA AL SITIO A ELIMINAR*/
         IF EXISTS (SELECT * FROM tb_destinations_values WHERE attribute_name=temp_class AND repetition=0) THEN
             SET SQL_SAFE_UPDATES = 0; 
             DELETE FROM tb_destinations_values WHERE attribute_name=temp_class AND repetition=0;
@@ -567,6 +579,7 @@ CREATE PROCEDURE sp_delete_destination(
             SET SQL_SAFE_UPDATES = 1;          
         END IF;  
         
+        /*SE ELIMINA TODOS LOS DATOS ASOCIADOS AL REGISTRO FUERA DE LAS PROBABILIDADES*/
         SET SQL_SAFE_UPDATES = 0; 
          DELETE FROM tb_value_destinations WHERE id=id_temp;
         SET SQL_SAFE_UPDATES = 1; 
@@ -678,6 +691,8 @@ BEGIN
     END;
     
     START TRANSACTION;
+
+    /*SE HACE LA LLAMADA PARA EL METODO DE ELIMINAR*/
     
     call sp_delete_destination(destination_id);
    
@@ -723,6 +738,8 @@ BEGIN
     END;
     
     START TRANSACTION;
+
+    /*PARA ACTUALIZAR SE HACE LA LLAMADA DEL METODO DE ELIMINAR Y LUEGO EL DE INSERTAR*/
     
     call sp_delete_destination(destination_id);
     call sp_insert(new_price, new_preference_place, new_destination_type, new_travel_time, new_road_type, new_class,new_name,new_address,new_description, new_x,new_y,new_image);
@@ -774,35 +791,7 @@ BEGIN
 END $$
 DELIMITER ;
 
-call sp_insert(
-'c','u','b','a','v','hotel',
-'Rancho San Rafael','Turrialba, Cartago','Paradero Turistico','9.903657','-83.670802','public/img/24.png'
-);
-
-insert into tb_destinations_values (id,attribute_name,repetition,discriminant)
-values (1,'price',0,0), (2,'preference_place',0,0), (3,'destination_type',0,0), 
-(4,'travel_time',0,0),(5,'road_type',0,0);
-
-insert into tb_user values('admin','admin')
-
-select * from tb_user
-
-select * from tb_destinations
-select * from tb_destinations_values
-select * from tb_destinations_differences
-select * from tb_destinations_probabilities
-select * from tb_destinations_prior_probabilities
-select * from tb_value_destinations
-
-        SET SQL_SAFE_UPDATES = 0;
-        delete from tb_destinations_values;
-delete from tb_destinations_differences;
-delete from tb_destinations_probabilities;
-delete from tb_destinations_prior_probabilities;
-delete from tb_value_destinations;
-delete from tb_destinations;
-        SET SQL_SAFE_UPDATES = 1;
-        
+/*LISTADO DE LOS REGISTROS DE LA BASE DE DATOS*/        
 
 call sp_insert('e','r','b','a','v','natural','Monumento nacional Guayabo','Santa Teresita Turrialba Cartago','El Monumento Nacional Guayabo es un area protegida de Costa Rica. En ella contiene uno de los sitios arqueologicos mas antiguos del pais.','9.971152','-83.690749','public/img/1.jpg');
 call sp_insert('i','u','y','c','p','natural','Monumento nacional Guayabo','Santa Teresita Turrialba Cartago','El Monumento Nacional Guayabo es un area protegida de Costa Rica. En ella contiene uno de los sitios arqueologicos mas antiguos del pais.','9.971152','-83.690749','public/img/1.jpg');
